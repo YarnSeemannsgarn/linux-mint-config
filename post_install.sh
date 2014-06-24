@@ -19,6 +19,7 @@ git config --global user.name YarnSeemannsgarn
 git config --global user.email janschlenker1990@gmail.com
 git config --global color.ui "auto"
 git config --global pack.threads "0"  
+git config --global push.default simple
 cd ~
 git init
 git remote add origin https://github.com/YarnSeemannsgarn/ubuntu-config
