@@ -1,0 +1,7 @@
+# Ignore everything, except wanted files
+/*
+!/.gitignore
+!/.bashrc
+!/.emacs
+!/.profile
+!/post_install.sh
