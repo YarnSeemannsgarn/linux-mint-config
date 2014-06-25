@@ -27,8 +27,6 @@ git remote add origin https://github.com/YarnSeemannsgarn/ubuntu-config
 git fetch --all
 git reset --hard origin/master
 
-sudo apt-get pdfshuffler -y
-
 sudo apt-get install flashplugin-installer -y
 
 sudo apt-get update
