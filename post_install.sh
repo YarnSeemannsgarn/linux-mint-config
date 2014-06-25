@@ -29,4 +29,8 @@ git reset --hard origin/master
 
 sudo apt-get install flashplugin-installer -y
 
+# Included in Linux Mint defaultly, but not in Ubuntu
+# Use e.g. to export jpeg as pdf
+sudo apt-get install gimp -y
+
 sudo apt-get update
