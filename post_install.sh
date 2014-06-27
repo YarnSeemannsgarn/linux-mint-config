@@ -1,23 +1,23 @@
 #!/bin/sh
 
-GITNAME="YarnSeemannsgarn"
+GIT_NAME="YarnSeemannsgarn"
 EMAIL="janschlenker1990@gmail.com"
 
-apt-get -y update
-apt-get -y dist-upgrade
-apt-get -y autoclean
+sudo apt-get -y update
+sudo apt-get -y dist-upgrade
+sudo apt-get -y autoclean
 
-apt-get -y install emacs24
+sudo apt-get -y install emacs24
 
 #TODO: find and add config file
-apt-get -y install nautilus-dropbox
+sudoapt-get -y install nautilus-dropbox
 
 #TODO: add config file /keepassx/config.ini
-apt-get -y install keepassx
+sudo apt-get -y install keepassx
  
 #TODO: add config file ~/.config/chromium
-apt-get -y install chromium-browser chromium-browser-l10n chromium-codecs-ffmpeg
-apt-get -y install chromium-codecs-ffmpeg-extra
+sudo apt-get -y install chromium-browser chromium-browser-l10n chromium-codecs-ffmpeg
+sudo apt-get -y install chromium-codecs-ffmpeg-extra
 
 ssh-keygen -t rsa -C $EMAIL
 eval `ssh-agent -s`
@@ -33,8 +33,8 @@ while true; do
 done
 ssh -T git@github.com
 
-apt-get -y install git
-git config --global user.name $GITNAME
+sudo apt-get -y install git
+git config --global user.name $GIT_NAME
 git config --global user.email $EMAIL
 git config --global color.ui "auto"
 git config --global pack.threads "0"  
@@ -47,13 +47,12 @@ git fetch --all
 git reset --hard origin/master
 
 # Normal flash player plugin doesn't work anymore
-apt-get -y install pepperflashplugin-nonfree
+sudo apt-get -y install pepperflashplugin-nonfree
 
 # Included in Linux Mint defaultly, but not in Ubuntu
 # Use e.g. to export jpeg as pdf
-apt-get -y install gimp
+sudo apt-get -y install gimp
 
-apt-get -y install texlive texlive-lang-german texlive-latex-extra
+sudo apt-get -y install texlive texlive-lang-german texlive-latex-extra
 
-apt-get -y install xfce4
-
+sudo apt-get -y install xfce4
