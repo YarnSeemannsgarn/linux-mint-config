@@ -1,5 +1,8 @@
 #!/bin/sh
 
+GITNAME="YarnSeemannsgarn"
+EMAIL="janschlenker1990@gmail.com"
+
 apt-get -y update
 apt-get -y dist-upgrade
 apt-get -y autoclean
@@ -16,9 +19,23 @@ apt-get -y install keepassx
 apt-get -y install chromium-browser chromium-browser-l10n chromium-codecs-ffmpeg
 apt-get -y install chromium-codecs-ffmpeg-extra
 
+ssh-keygen -t rsa -C $EMAIL
+eval `ssh-agent -s`
+ssh-add ~/.ssh/id_rsa
+echo "Add public rsa key to GitHub manually, to enable git pushes without password request. You can find add instructions under https://help.github.com/articles/generating-ssh-keys#step-3-add-your-ssh-key-to-github"
+while true; do
+    read -p "Have you added your public key to GitHub?" answer
+    case $answer in
+	 [Yy]* ) break;;
+	 [Nn]* ) echo "Then do it!";;
+	 * ) echo "Please answer yes or no.";;
+    esac
+done
+ssh -T git@github.com
+
 apt-get -y install git
-git config --global user.name YarnSeemannsgarn
-git config --global user.email janschlenker1990@gmail.com
+git config --global user.name $GITNAME
+git config --global user.email $EMAIL
 git config --global color.ui "auto"
 git config --global pack.threads "0"  
 git config --global push.default simple
