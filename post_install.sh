@@ -10,7 +10,7 @@ apt-get -y install emacs24
 apt-get -y install nautilus-dropbox
 
 #TODO: add config file /keepassx/config.ini
-sudo apt-get -y install keepassx
+apt-get -y install keepassx
  
 #TODO: add config file ~/.config/chromium
 apt-get -y install chromium-browser chromium-browser-l10n chromium-codecs-ffmpeg
