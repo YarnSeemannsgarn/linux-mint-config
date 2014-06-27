@@ -10,7 +10,7 @@ sudo apt-get -y autoclean
 sudo apt-get -y install emacs24
 
 #TODO: find and add config file
-sudoapt-get -y install nautilus-dropbox
+sudo apt-get -y install nautilus-dropbox
 
 #TODO: add config file /keepassx/config.ini
 sudo apt-get -y install keepassx
