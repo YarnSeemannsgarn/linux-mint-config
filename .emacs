@@ -16,4 +16,4 @@
 ;; Tab size 4
 (setq tab-width 4)
 ;;; backup folder
-(setq backup-directory-alist `(("." . "~/.saves")))
+(setq backup-directory-alist `(("." . "~/.emacs_saves")))
