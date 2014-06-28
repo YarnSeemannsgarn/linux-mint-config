@@ -1,4 +1,4 @@
 #!/bin/bash
-apt-get -y update 
-apt-get -y dist-upgrade 
-apt-get -y autoclean
+sudo apt-get -y update 
+sudo apt-get -y dist-upgrade 
+sudo apt-get -y autoclean
