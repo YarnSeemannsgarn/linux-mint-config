@@ -62,3 +62,6 @@ sudo apt-get -y install build-essential dkms
 sudo apt-get install -y virtualbox virtualbox-qt virtualbox-dkms virtualbox-guest-dkms
 sudo adduser $USER vboxusers
 newgrp - vboxusers
+
+# Burn programme - defaultly included in Ubuntu, but noteworthy for other distributions
+sudo apt-get -y install brasero
