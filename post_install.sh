@@ -23,14 +23,7 @@ ssh-keygen -t rsa -C $EMAIL
 eval `ssh-agent -s`
 ssh-add ~/.ssh/id_rsa
 echo "Add public rsa key to GitHub manually, to enable git pushes without password request. You can find add instructions under https://help.github.com/articles/generating-ssh-keys#step-3-add-your-ssh-key-to-github"
-while true; do
-    read -p "Have you added your public key to GitHub?" answer
-    case $answer in
-	 [Yy]* ) break;;
-	 [Nn]* ) echo "Then do it!";;
-	 * ) echo "Please answer yes or no.";;
-    esac
-done
+read -p "Press any key to continue... " -n1 -s
 ssh -T git@github.com
 
 sudo apt-get -y install git
@@ -62,3 +55,20 @@ sudo apt-get -y install pdfshuffler
 
 # German language package
 sudo apt-get -y install libreoffice-l10n-de
+
+# Dynamic Kernel Module Support (e.g. for automatic VirtualBox update when updating Linux Kernel)
+sudo apt-get -y install build-essential dkms
+
+sudo apt-get install -y virtualbox virtualbox-qt virtualbox-dkms virtualbox-guest-dkms
+sudo adduser $USER vboxusers
+newgrp - vboxusers
+sudo apt-get -y install virtualbox-guest-additions-iso 
+echo "You have to mount the .iso file under /usr/share/virtualbox/ via VirtualBox, to enable guest additions (e.g. Copy & Paste). 
+
+Afterwards you can install the guest addition on the host.
+Windows: The .exe file is part of the CD/DVD drive
+Linux: Execute 'sudo sh ./VBoxLinuxAdditions.run' under a mounted CD/DVD drive
+
+"
+read -p "Press any key to continue... " -n1 -s
+
