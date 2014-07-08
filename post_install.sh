@@ -15,10 +15,6 @@ sudo apt-get -y install nautilus-dropbox
 #TODO: add config file /keepassx/config.ini
 sudo apt-get -y install keepassx
  
-#TODO: add config file ~/.config/chromium
-sudo apt-get -y install chromium-browser chromium-browser-l10n chromium-codecs-ffmpeg
-sudo apt-get -y install chromium-codecs-ffmpeg-extra
-
 ssh-keygen -t rsa -C $EMAIL
 eval `ssh-agent -s`
 ssh-add ~/.ssh/id_rsa
@@ -79,3 +75,17 @@ read -p "Press any key to continue... " -n1 -s
 
 # Burn programme - defaultly included in Ubuntu, but noteworthy for other distributions
 sudo apt-get -y install brasero
+
+# Workaround for balsamiq following http://support.balsamiq.com/customer/portal/articles/1245742
+sudo apt-get -y install ia32-libs
+sudo ln -s /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
+sudo ln -s /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0.2.0 /usr/lib/libgnome-keyring.so.0.2.0
+wget http://airdownload.adobe.com/air/lin/download/latest/AdobeAIRInstaller.bin
+chmod +x AdobeAIRInstaller.bin
+./AdobeAIRInstaller.bin
+sudo rm /usr/lib/libgnome-keyring.so.0
+sudo rm /usr/lib/libgnome-keyring.so.0.2.0
+wget http://builds.balsamiq.com/b/mockups-desktop/MockupsForDesktop64bit.deb
+sudo dpkg -i MockupsForDesktop64bit.deb
+sudo rm /home/$USER/AdobeAIRInstaller.bin
+sudo rm /home/$USER/MockupsForDesktop64bit.deb
