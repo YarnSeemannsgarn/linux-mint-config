@@ -2,6 +2,7 @@
 
 GIT_NAME="YarnSeemannsgarn"
 EMAIL="janschlenker1990@gmail.com"
+LAST_PENCIL_VERSION="2.0.5"
 
 sudo apt-get -y update
 sudo apt-get -y dist-upgrade
@@ -76,16 +77,10 @@ read -p "Press any key to continue... " -n1 -s
 # Burn programme - defaultly included in Ubuntu, but noteworthy for other distributions
 sudo apt-get -y install brasero
 
-# Workaround for balsamiq following http://support.balsamiq.com/customer/portal/articles/1245742
-sudo apt-get -y install ia32-libs
-sudo ln -s /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0 /usr/lib/libgnome-keyring.so.0
-sudo ln -s /usr/lib/x86_64-linux-gnu/libgnome-keyring.so.0.2.0 /usr/lib/libgnome-keyring.so.0.2.0
-wget http://airdownload.adobe.com/air/lin/download/latest/AdobeAIRInstaller.bin
-chmod +x AdobeAIRInstaller.bin
-./AdobeAIRInstaller.bin
-sudo rm /usr/lib/libgnome-keyring.so.0
-sudo rm /usr/lib/libgnome-keyring.so.0.2.0
-wget http://builds.balsamiq.com/b/mockups-desktop/MockupsForDesktop64bit.deb
-sudo dpkg -i MockupsForDesktop64bit.deb
-sudo rm /home/$USER/AdobeAIRInstaller.bin
-sudo rm /home/$USER/MockupsForDesktop64bit.deb
+echo "We have to check manually, whether there is a newer version of the mockup-tool pencil, because they don't provide a symlink for the newest version. So the last installed version was ${LAST_PENCIL_VERSION}. Please check http://pencil.evolus.vn/Downloads.html for a newer version."
+read -p "Is there a newer version?" -s answer
+case $answer in
+        [Yy]* ) echo "Then download the newer version and install it with sudo dpkg -i *.deb. Also don't forget to change the version in this post_install script. As a last step you could also check, whether they finally provide a symlink."; read -p "Press any key to continue... " -n1 -s; break;; 
+        [Nn]* ) echo "Allright! Then we just install the last version automatically =)"; read -p "Press any key to continue... " -n1 -s; wget http://evoluspencil.googlecode.com/files/evoluspencil_2.0.5_all.deb; sudo dpkg -i evoluspencil_2.0.5_all.deb; break;; 
+        * ) echo "Please answer yes or no.";
+esac
