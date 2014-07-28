@@ -45,6 +45,7 @@ sudo apt-get -y install gimp
 
 sudo apt-get -y install texlive texlive-lang-german texlive-latex-extra
 
+# Use e.g. for VirtualBox
 sudo apt-get -y install xfce4
 
 # Add, because of sizing issues in LibreDraw
@@ -84,3 +85,12 @@ case $answer in
         [Nn]* ) echo "Allright! Then we just install the last version automatically =)"; read -p "Press any key to continue... " -n1 -s; wget http://evoluspencil.googlecode.com/files/evoluspencil_2.0.5_all.deb; sudo dpkg -i evoluspencil_2.0.5_all.deb; break;; 
         * ) echo "Please answer yes or no.";
 esac
+
+sudo apt-get -y install ruby 
+
+sudo apt-get -y install xournal
+
+sudo sh -c 'echo "# Manually added\n# Spotify source\ndeb http://repository.spotify.com stable non-free" >> /etc/apt/sources.list'
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 94558F59
+sudo apt-get update
+sudo apt-get install spotify-client
