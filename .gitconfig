@@ -1,0 +1,9 @@
+[user]
+	name = YarnSeemannsgarn
+	email = janschlenker1990@gmail.com
+[color]
+	ui = auto
+[pack]
+	threads = 0
+[push]
+	default = simple

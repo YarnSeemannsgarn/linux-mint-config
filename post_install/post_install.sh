@@ -1,6 +1,5 @@
 #!/bin/sh
 
-GIT_NAME="YarnSeemannsgarn"
 EMAIL="janschlenker1990@gmail.com"
 LAST_PENCIL_VERSION="2.0.5"
 
@@ -24,12 +23,7 @@ read -p "Press any key to continue... " -n1 -s
 ssh -T git@github.com
 
 sudo apt-get -y install git
-git config --global user.name $GIT_NAME
-git config --global user.email $EMAIL
-git config --global color.ui "auto"
-git config --global pack.threads "0"  
-git config --global push.default simple
-cd ~
+cd
 git init
 git remote add origin git@github.com:YarnSeemannsgarn/ubuntu-config.git
 # Instead of pull use fetch and reset to overwrite local files
@@ -86,11 +80,13 @@ case $answer in
         * ) echo "Please answer yes or no.";
 esac
 
-sudo apt-get -y install ruby 
-
 sudo apt-get -y install xournal
 
-sudo sh -c 'echo "# Manually added\n# Spotify source\ndeb http://repository.spotify.com stable non-free" >> /etc/apt/sources.list'
+sudo sh -c 'echo "# Manually added" >> /etc/apt/sources.list'
+sudo sh -c 'echo "# Spotify source" >> /etc/apt/sources.list'
+sudo sh -c 'echo "deb http://repository.spotify.com stable non-free" >> /etc/apt/sources.list'
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 94558F59
 sudo apt-get update
 sudo apt-get install spotify-client
+
+. ~/post_install/ruby_on_rails_inst.sh
