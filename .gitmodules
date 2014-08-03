@@ -1,3 +1,6 @@
 [submodule "rinari"]
-    path = .emacs.d/rinari
-    url = git@github.com:eschulte/rinari.git
+	   path = .emacs.d/rinari
+	   url = git@github.com:eschulte/rinari.git
+[submodule "rbenv"]
+	   path = .rbenv
+	   url = git@github.com:sstephenson/rbenv.git

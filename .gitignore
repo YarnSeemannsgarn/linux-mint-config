@@ -3,6 +3,8 @@
 !/post_install
 !/.emacs.d
 /.emacs.d/auto-save-list
+!/.rbenv
+
 !/.gitignore
 !/.bashrc
 !/.emacs
