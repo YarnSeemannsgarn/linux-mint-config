@@ -15,5 +15,14 @@
 ;; Jan Schlenker 
 ;; Tab size 4
 (setq tab-width 4)
-;;; backup folder
+
+;; Backup folder
 (setq backup-directory-alist `(("." . "~/.emacs_saves")))
+
+;; Rinari
+(add-to-list 'load-path "~/.emacs.d/rinari")
+(require 'rinari)
+(global-rinari-mode)
+
+(require 'ido)
+(ido-mode t)

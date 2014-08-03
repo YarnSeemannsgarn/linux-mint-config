@@ -7,14 +7,6 @@ sudo apt-get -y update
 sudo apt-get -y dist-upgrade
 sudo apt-get -y autoclean
 
-sudo apt-get -y install emacs24
-
-#TODO: find and add config file
-sudo apt-get -y install nautilus-dropbox
-
-#TODO: add config file /keepassx/config.ini
-sudo apt-get -y install keepassx
- 
 ssh-keygen -t rsa -C $EMAIL
 eval `ssh-agent -s`
 ssh-add ~/.ssh/id_rsa
@@ -30,6 +22,20 @@ git remote add origin git@github.com:YarnSeemannsgarn/ubuntu-config.git
 git fetch --all
 git reset --hard origin/master
 
+sudo apt-get -y install emacs24
+git submodule init
+git submodule update
+cd $HOME/.emacs.d/rinari
+git submodule init
+git submodule update
+cd
+
+#TODO: find and add config file
+sudo apt-get -y install nautilus-dropbox
+
+#TODO: add config file /keepassx/config.ini
+sudo apt-get -y install keepassx
+ 
 # Normal flash player plugin doesn't work anymore
 sudo apt-get -y install pepperflashplugin-nonfree
 
