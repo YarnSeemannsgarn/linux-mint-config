@@ -1,6 +1,8 @@
 # Ignore everything, except wanted files
 /*
 !/post_install
+!/.emacs.d
+/.emacs.d/auto-save-list
 !/.gitignore
 !/.bashrc
 !/.emacs
