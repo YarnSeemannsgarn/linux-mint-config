@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Following the guide under https://gorails.com/setup/ubuntu/14.04
 sudo apt-get -y update
 sudo apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties
