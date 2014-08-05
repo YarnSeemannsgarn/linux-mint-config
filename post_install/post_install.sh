@@ -2,6 +2,7 @@
 
 EMAIL="janschlenker1990@gmail.com"
 LAST_PENCIL_VERSION="2.0.5"
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 sudo apt-get -y update
 sudo apt-get -y dist-upgrade
@@ -9,7 +10,7 @@ sudo apt-get -y autoclean
 
 sudo apt-get -y install emacs24
 
-. $HOME/post_install/git_inst.sh
+. $DIR/git_inst.sh
 
 #TODO: find and add config file
 sudo apt-get -y install nautilus-dropbox
@@ -38,12 +39,12 @@ sudo apt-get -y install libreoffice-l10n-de
 # Dynamic Kernel Module Support (e.g. for automatic VirtualBox update when updating Linux Kernel)
 sudo apt-get -y install build-essential dkms
 
-. $HOME/post_install/vbox_inst.sh
+. $DIR/vbox_inst.sh
 
-. $HOME/post_install/brasero_inst.sh
+. $DIR/brasero_inst.sh
 
 sudo apt-get -y install xournal
 
-. $HOME/post_install/ruby_on_rails_inst.sh
+. $DIR/ruby_on_rails_inst.sh
 
 git submodule update --init --recursive
