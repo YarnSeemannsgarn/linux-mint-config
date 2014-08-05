@@ -4,6 +4,6 @@ sudo apt-get -y dist-upgrade
 sudo apt-get -y autoclean
 cd
 git pull
-git submodule foreach git pull --recursive
-cd ~/.rbenv
-git pull
+git submodule update --init --recursive
+
+
