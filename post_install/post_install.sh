@@ -47,4 +47,6 @@ sudo apt-get -y install xournal
 
 . $DIR/ruby_on_rails_inst.sh
 
+sudo apt-get -y install sqlitebrowser
+
 git submodule update --init --recursive
