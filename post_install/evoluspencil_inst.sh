@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# Burn programme - defaultly included in Ubuntu, but noteworthy for other distributions
-sudo apt-get -y install brasero
-
 echo "We have to check manually, whether there is a newer version of the mockup-tool pencil, because they don't provide a symlink for the newest version. So the last installed version was ${LAST_PENCIL_VERSION}. Please check http://pencil.evolus.vn/Downloads.html for a newer version."
 read -p "Is there a newer version?" -s answer
 case $answer in

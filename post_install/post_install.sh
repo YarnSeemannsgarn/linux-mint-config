@@ -41,7 +41,10 @@ sudo apt-get -y install build-essential dkms
 
 . $DIR/vbox_inst.sh
 
-. $DIR/brasero_inst.sh
+. $DIR/evoluspencil_inst.sh
+
+# Burn programme - defaultly included in Ubuntu, but noteworthy for other distributions
+sudo apt-get -y install brasero
 
 sudo apt-get -y install xournal
 
