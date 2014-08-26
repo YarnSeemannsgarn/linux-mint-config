@@ -1,15 +1,22 @@
-# Ignore everything, except wanted files
+# Ignore everything, except wanted files #
+##########################################
 /*
+
+# Git files
+!/.gitignore
+!/.gitconfig
+!/.gitmodules
+
+# Directories
 !/post_install
-!/.emacs.d
-/.emacs.d/auto-save-list
+!/.emacs.d/rinari
 !/.rbenv
 
-!/.gitignore
+# Configs
 !/.bashrc
 !/.emacs
 !/.profile
-!/update.sh
 !/.gemrc
-!/.gitconfig
-!/.gitmodules
+
+# 
+!/update.sh

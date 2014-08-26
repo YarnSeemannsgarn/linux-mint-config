@@ -50,4 +50,7 @@ sudo apt-get -y install xournal
 
 . $DIR/ruby_on_rails_inst.sh
 
+# Other webbrowser, to check website development
+sudo apt-get -y install sudo apt-get install chromium-browser chromium-browser-l10n
+
 git submodule update --init --recursive

@@ -12,7 +12,11 @@
  ;; If there is more than one, they won't work right.
  )
 
-;; Jan Schlenker 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; ********* Own customizations ********* ;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ;; Tab size 4
 (setq tab-width 4)
 
@@ -24,6 +28,7 @@
 (require 'rinari)
 (global-rinari-mode)
 
+;; Rinari recommends
 ;;(require 'ido) 
 ;;(ido-mode t)
 
