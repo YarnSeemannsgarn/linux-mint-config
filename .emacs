@@ -45,8 +45,8 @@
 	   (delq 'buffer-file-name mumamo-per-buffer-local-vars))))
 
 ;; Scss-mode (https://github.com/antonj/scss-mode/)
-(setq exec-path (cons (expand-file-name "~/.rbenv/shims/scss
-") exec-path))
+(setq exec-path (cons (expand-file-name "~/.rbenv/shims") exec-path))
+(setq scss-compile-at-save nil)
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/scss-mode"))
 (autoload 'scss-mode "scss-mode")
