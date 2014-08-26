@@ -9,8 +9,8 @@
 
 # Directories
 !/post_install
-!/.emacs.d/rinari
-!/.emacs.d/scss-mode
+!/.emacs.d
+/.emacs.d/auto-save-list
 !/.rbenv
 
 # Configs

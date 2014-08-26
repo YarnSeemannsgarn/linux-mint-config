@@ -32,6 +32,9 @@
 ;;(require 'ido) 
 ;;(ido-mode t)
 
+;; Nxhtml
+(load "~/.emacs.d/nxhtml/autostart.el")
+
 ;; Scss-mode (https://github.com/antonj/scss-mode/)
 (setq exec-path (cons (expand-file-name "~/.rbenv/shims/scss
 ") exec-path))
