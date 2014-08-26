@@ -17,8 +17,8 @@
 ;;; ********* Own customizations ********* ;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; Tab size 4
-(setq tab-width 4)
+;; Tab size 2
+(setq tab-width 2)
 
 ;; Backup folder
 (setq backup-directory-alist `(("." . "~/.emacs_saves")))
@@ -31,6 +31,14 @@
 ;; Rinari recommends
 ;;(require 'ido) 
 ;;(ido-mode t)
+
+;; Scss-mode (https://github.com/antonj/scss-mode/)
+(setq exec-path (cons (expand-file-name "~/.rbenv/shims/scss
+") exec-path))
+
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/scss-mode"))
+(autoload 'scss-mode "scss-mode")
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
 
 ;; Keybindings to easily resize windows
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)

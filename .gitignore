@@ -10,6 +10,7 @@
 # Directories
 !/post_install
 !/.emacs.d/rinari
+!/.emacs.d/scss-mode
 !/.rbenv
 
 # Configs
@@ -18,5 +19,5 @@
 !/.profile
 !/.gemrc
 
-# 
+# Other
 !/update.sh
