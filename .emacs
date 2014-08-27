@@ -52,6 +52,11 @@
 (autoload 'scss-mode "scss-mode")
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
 
+;; Coffee-mode (https://github.com/defunkt/coffee-mode)
+(load "~/.emacs.d/coffee-mode/coffee-mode.el")
+(custom-set-variables '(coffee-tab-width 2))
+(setq coffee-indent-tabs-mode t)
+
 ;; Keybindings to easily resize windows
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
 (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)

@@ -15,3 +15,6 @@
 [submodule "rbenv"]
 	   path = .rbenv
 	   url = git@github.com:sstephenson/rbenv.git
+[submodule "/home/jan/.emacs.d/coffee-mode"]
+	path = /home/jan/.emacs.d/coffee-mode
+	url = git@github.com:defunkt/coffee-mode.git
