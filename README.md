@@ -7,4 +7,4 @@ Installation
 ------------
 
 Don't clone the repository (That will be done automatically)!
-Just download [post_install.sh](post_install/post_install.sh), edit the email in the file, and run it.
+Just download [post_install/](post_install), edit the email in [post_install.sh](post_install/post_install.sh), and run it.
