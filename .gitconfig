@@ -7,3 +7,5 @@
 	threads = 0
 [push]
 	default = simple
+[core]
+        editor = emacs
