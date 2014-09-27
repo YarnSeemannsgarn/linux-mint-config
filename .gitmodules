@@ -1,20 +1,6 @@
 ### Don't forget to put paths into .gitignore file ###
 
 # Emacs repos
-[submodule "rinari"]
-	   path = .emacs.d/rinari
-	   url = git@github.com:eschulte/rinari.git
-[submodule "nxhtml"]
-	   path = .emacs.d/nxhtml
-	   url = git@github.com:emacsmirror/nxhtml.git
-[submodule "scss-mode"]
-	   path = .emacs.d/scss-mode
-	   url = git@github.com:antonj/scss-mode.git
-[submodule "coffee-mode"]
-	   path = .emacs.d/coffee-mode
-	   url = git@github.com:defunkt/coffee-mode.git
-
-# Other repos
 [submodule "rbenv"]
 	   path = .rbenv
 	   url = git@github.com:sstephenson/rbenv.git
