@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 ssh-keygen -t rsa -C $EMAIL
 eval `ssh-agent -s`

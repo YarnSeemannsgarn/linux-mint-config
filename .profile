@@ -20,6 +20,3 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
-
-# Jan Schlenker - Java classpath
-export CLASSPATH=$CLASSPATH:/home/jan/Programming/ImageResizer

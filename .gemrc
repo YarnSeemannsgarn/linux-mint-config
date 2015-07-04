@@ -1,2 +1,0 @@
-# Do not install the documentation for each package locally (due to rbenv)
-gem: --no-ri --no-rdoc

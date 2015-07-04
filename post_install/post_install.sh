@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 EMAIL="janschlenker1990@gmail.com"
 LAST_PENCIL_VERSION="2.0.5"
@@ -8,6 +8,7 @@ sudo apt-get -y update
 sudo apt-get -y dist-upgrade
 sudo apt-get -y autoclean
 
+# TODO: install packages somehow automatically
 sudo apt-get -y install emacs24
 
 . $DIR/git_inst.sh
@@ -27,7 +28,7 @@ sudo apt-get -y install gimp
 
 sudo apt-get -y install texlive texlive-lang-german texlive-latex-extra
 
-# Use e.g. for VirtualBox
+# Use for slow computers
 sudo apt-get -y install xfce4
 
 # Add, because of sizing issues in LibreDraw
@@ -36,10 +37,7 @@ sudo apt-get -y install pdfshuffler
 # German language package
 sudo apt-get -y install libreoffice-l10n-de
 
-# Dynamic Kernel Module Support (e.g. for automatic VirtualBox update when updating Linux Kernel)
-sudo apt-get -y install build-essential dkms
-
-. $DIR/vbox_inst.sh
+#. $DIR/vbox_inst.sh
 
 . $DIR/evoluspencil_inst.sh
 
@@ -48,9 +46,5 @@ sudo apt-get -y install brasero
 
 sudo apt-get -y install xournal
 
-. $DIR/ruby_on_rails_inst.sh
-
 # Other webbrowser, to check website development
 sudo apt-get -y install sudo apt-get install chromium-browser chromium-browser-l10n
-
-git submodule update --init --recursive

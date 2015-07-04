@@ -1,4 +1,7 @@
-#!/bin/sh
+#!/bin/bash
+
+# Dynamic Kernel Module Support (e.g. for automatic VirtualBox update when updating Linux Kernel)
+sudo apt-get -y install build-essential dkms
 
 sudo apt-get install -y virtualbox virtualbox-qt virtualbox-dkms virtualbox-guest-dkms
 sudo adduser $USER vboxusers

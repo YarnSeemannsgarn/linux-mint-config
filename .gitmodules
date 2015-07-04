@@ -1,6 +1,0 @@
-### Don't forget to put paths into .gitignore file ###
-
-# Emacs repos
-[submodule "rbenv"]
-	   path = .rbenv
-	   url = git@github.com:sstephenson/rbenv.git

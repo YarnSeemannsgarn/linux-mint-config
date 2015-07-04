@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo "We have to check manually, whether there is a newer version of the mockup-tool pencil, because they don't provide a symlink for the newest version. So the last installed version was ${LAST_PENCIL_VERSION}. Please check http://pencil.evolus.vn/Downloads.html for a newer version."
 read -p "Is there a newer version?" -s answer

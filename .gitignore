@@ -9,13 +9,11 @@
 
 # Directories
 !/post_install
-!/.rbenv
 
 # Configs
 !/.bashrc
 !/.emacs
 !/.profile
-!/.gemrc
 
 # Other
 !/update.sh

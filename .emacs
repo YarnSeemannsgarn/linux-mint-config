@@ -48,7 +48,7 @@
 (semantic-mode 1)
 
 ;; Tab settings
-(setq tab-width 2)
+(setq tab-width 4)
 
 ;; Keybindings to easily resize windows
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
@@ -83,22 +83,12 @@
 )
 (add-hook 'c-mode-common-hook 'my:add-semantic-to-autocomplete)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; ********* Rails ********* ;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(require 'rinari)
-(global-rinari-mode)
-
-;; ;; Rinari recommends
-;; ;;(require 'ido) 
-;; ;;(ido-mode t)
-
-;; Rails and html
-(require 'rhtml-mode)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; ********* Web Development ********* ;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Scss-mode (https://github.com/antonj/scss-mode/)
-(require 'scss-mode)
+;(require 'scss-mode)
 
 ;; Coffee-mode (https://github.com/defunkt/coffee-mode)
-(require 'coffee-mode)
+;(require 'coffee-mode)
