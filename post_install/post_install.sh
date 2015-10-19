@@ -8,7 +8,11 @@ sudo apt-get -y update
 sudo apt-get -y dist-upgrade
 sudo apt-get -y autoclean
 
-# TODO: install packages somehow automatically
+# Must be installed before running emacs, otherwise there will be an error
+# See here: http://stackoverflow.com/questions/14214714/cedet-wrong-type-argument-stringp-1
+sudo apt-get -y install g++
+
+#TODO: install packages somehow automatically
 sudo apt-get -y install emacs24
 
 . $DIR/git_inst.sh
