@@ -24,7 +24,6 @@
 
 ; Install required packages packages automaticaly
 (setq package-list '(package auto-complete yasnippet auto-complete-c-headers))
-; auto-complete-config --> does not work
 
 ; list the repositories containing them
 (setq package-archives '(("melpa" . "http://melpa.milkbox.net/packages/")))
@@ -40,6 +39,11 @@
 (dolist (package package-list)
   (unless (package-installed-p package)
     (package-install package)))
+
+(require 'package)
+(require 'auto-complete)
+(require 'yasnippet)
+(require 'auto-complete-c-headers)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; ********* General  ********* ;;;;;;;;;;;;;
