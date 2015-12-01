@@ -14,6 +14,9 @@
 !/.bashrc
 !/.emacs
 !/.profile
+!/.ssh/
+/.ssh/*
+!/.ssh/config
 
 # Other
 !/update.sh
