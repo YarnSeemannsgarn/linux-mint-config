@@ -49,6 +49,10 @@
 ;;; ********* General  ********* ;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; Start in fullscreen
+(custom-set-variables
+ '(initial-frame-alist (quote ((fullscreen . maximized)))))
+
 (xterm-mouse-mode 1)
 (ac-config-default)
 (yas-global-mode 1)
