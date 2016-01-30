@@ -10,9 +10,9 @@
 [core]
         editor = emacs
 [alias]
-  co = checkout
-  b = branch
-  s = status
-  d = diff
-  tree = log --branches --decorate --graph --tags
-  t = log --branches --decorate --graph --tags
+	co = checkout
+	b = branch
+	s = status
+	d = diff
+	tree = log --branches --decorate --graph --tags
+	t = log --branches --decorate --graph --tags
