@@ -54,3 +54,6 @@ sudo apt-get -y install xournal
 sudo apt-get -y install chromium-browser chromium-browser-l10n
 
 sudo apt-get -y install default-jdk
+
+# Simple image editor like paint
+sudo apt-get -y install pinta
