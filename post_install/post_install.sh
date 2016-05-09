@@ -30,7 +30,7 @@ sudo apt-get -y install pepperflashplugin-nonfree
 # Use e.g. to export jpeg as pdf
 sudo apt-get -y install gimp
 
-sudo apt-get -y install texlive texlive-lang-german texlive-latex-extra lmodern latex-xcolor
+sudo apt-get -y install texlive texlive-lang-german texlive-latex-extra lmodern latex-xcolor pgf
 
 # Use for slow computers
 sudo apt-get -y install xfce4
