@@ -23,7 +23,7 @@
 ; Taken from http://stackoverflow.com/questions/10092322/how-to-automatically-install-emacs-packages-by-specifying-a-list-of-package-name
 
 ; Install required packages packages automaticaly
-(setq package-list '(package auto-complete yasnippet auto-complete-c-headers))
+(setq package-list '(package auto-complete yasnippet auto-complete-c-headers php-mode))
 
 ; list the repositories containing them
 (setq package-archives '(("melpa" . "http://melpa.milkbox.net/packages/")))
@@ -44,6 +44,7 @@
 (require 'auto-complete)
 (require 'yasnippet)
 (require 'auto-complete-c-headers)
+(require 'php-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; ********* General  ********* ;;;;;;;;;;;;;
