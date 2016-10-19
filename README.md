@@ -1,7 +1,7 @@
-ubuntu-config
-=============
+linux-mint-config
+=================
 
-This config is useful, if you automatically want to add my favourite programs to a fresh Ubuntu.
+This config is useful, if you automatically want to add my favourite programs to a fresh Linux Mint 18.
 
 Installation
 ------------
