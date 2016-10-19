@@ -58,7 +58,7 @@ sudo apt-get -y install default-jdk
 # Simple image editor like paint
 sudo apt-get -y install pinta
 
-sudo apt-get -y skype
+sudo apt-get -y install skype
 
-sudo apt-get -y redshift
+sudo apt-get -y install redshift
 
