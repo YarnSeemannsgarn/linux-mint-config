@@ -58,6 +58,9 @@ sudo apt-get -y install default-jdk
 # Simple image editor like paint
 sudo apt-get -y install pinta
 
+# Skype needs canonical partner: https://wiki.ubuntuusers.de/Canonical_Partner/
+sudo add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner"
+sudo apt-get update
 sudo apt-get -y install skype
 
 sudo apt-get -y install redshift
