@@ -43,7 +43,7 @@ sudo apt-get -y install libreoffice-l10n-de
 
 #. $DIR/vbox_inst.sh
 
-. $DIR/evoluspencil_inst.sh
+#. $DIR/evoluspencil_inst.sh
 
 # Burn programme - defaultly included in Ubuntu, but noteworthy for other distributions
 sudo apt-get -y install brasero
@@ -57,3 +57,8 @@ sudo apt-get -y install default-jdk
 
 # Simple image editor like paint
 sudo apt-get -y install pinta
+
+sudo apt-get -y skype
+
+sudo apt-get -y redshift
+
