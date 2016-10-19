@@ -11,6 +11,7 @@
         editor = emacs
 [alias]
 	co = checkout
+	c = commit
 	b = branch
 	s = status
 	d = diff
