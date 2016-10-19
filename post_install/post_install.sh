@@ -63,5 +63,5 @@ sudo apt-get -y install pinta
 # sudo apt-get update
 sudo apt-get -y install skype
 
-sudo apt-get -y install redshift
+sudo apt-get -y install redshift redshift-gtk
 
