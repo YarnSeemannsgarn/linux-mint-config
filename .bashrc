@@ -127,3 +127,8 @@ fi
 ### OWN ADAPTIONS ###
 # Timestamp for history
 HISTTIMEFORMAT="%F %T "
+
+# Path adjustment for
+# Composer, PHPStorm
+PATH=$PATH:/home/yarn/.config/composer/vendor/bin:/opt/PhpStorm/bin
+export PATH
