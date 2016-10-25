@@ -1,4 +1,4 @@
-#!/bash/sh
+#!/bin/bash
 # Taken from https://getcomposer.org/doc/faqs/how-to-install-composer-programmatically.md
 
 EXPECTED_SIGNATURE=$(wget https://composer.github.io/installer.sig -O - -q)
