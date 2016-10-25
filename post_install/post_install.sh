@@ -75,4 +75,4 @@ sudo apt-get -y install libatk-adaptor:i386 libgail-common:i386
 sudo apt-get -y install valgrind 
 
 # This repositories I need when I work for smart dato
-. $DIR/smart_dato.sh
+. $DIR/smart_dato_inst.sh

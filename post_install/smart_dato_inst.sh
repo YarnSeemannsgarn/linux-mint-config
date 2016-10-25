@@ -59,7 +59,7 @@ while true; do
 
 	    sudo service apache2 restart
 
-	    . $DIR/smart_dato.sh
+	    . $DIR/composer_inst.sh
 	    break;;
 	
         [Nn]* ) exit;;
