@@ -63,5 +63,15 @@ sudo apt-get -y install pinta
 # sudo apt-get update
 sudo apt-get -y install skype
 
-sudo apt-get -y install redshift redshift-gtk
+sudo apt-get -y install redshift redshift-gtk geoclue-2.0
 
+sudo apt-get -y install hamster-indicator hamster-applet
+
+sudo apt-get -y install libatk-adaptor libgail-common
+
+sudo apt-get -y install libatk-adaptor:i386 libgail-common:i386
+
+sudo apt-get -y install valgrind 
+
+# This repositories I need when I work for smart dato
+$DIR/smart_dato.sh
