@@ -34,6 +34,8 @@ while true; do
 
 	    sudo apt-get -y install php-gd
 
+	    sudo apt-get -y install php-gettext
+
 	    # sudo apt-get -y install mysql-workbench
 
 	    sudo apt-get -y install apache2 apache2-doc 
@@ -51,11 +53,13 @@ while true; do
 
 	    # Enable mods for apache
 	    sudo phpenmod mcrypt
-	    sudo php-mbstring php-gettext
+	    sudo phpenmod php-mbstring 
 
 	    sudo a2enconf phpmyadmin
 
 	    sudo service apache2 restart
+
+	    . $DIR/smart_dato.sh
 	    break;;
 	
         [Nn]* ) exit;;
