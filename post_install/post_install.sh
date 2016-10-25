@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x # Print each command
 
 EMAIL="janschlenker1990@gmail.com"
 LAST_PENCIL_VERSION="2.0.5"
