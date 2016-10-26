@@ -8,4 +8,4 @@ Installation
 
 Don't clone the repository (That will be done automatically)! Either way, you shouldn't be able to clone the repo on your own, because on a fresh Linux Mint git is not installed.
 
-Just download [post_install/](post_install), edit the email in [post_install.sh](post_install/post_install.sh), and run it.
+Just download [post_install/](post_install), edit the config parameters in [config.cfg](post_install/config.cfg) and run the [post_install.sh](post_install/post_install.sh) script.

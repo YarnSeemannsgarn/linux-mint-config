@@ -1,14 +1,13 @@
 #!/bin/bash
 
-# Config
-EMAIL="janschlenker1990@gmail.com"
-SMART_DATO_DIR="$HOME/Smart_Dato"
-# LAST_PENCIL_VERSION="2.0.5"
+set -x # Print each command
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-set -x # Print each command
+# Read config
+source $DIR/config.cfg
 
+# First upgrade the whole system
 sudo apt-get -y update
 sudo apt-get -y dist-upgrade
 sudo apt-get -y autoclean
@@ -17,7 +16,6 @@ sudo apt-get -y autoclean
 # See here: http://stackoverflow.com/questions/14214714/cedet-wrong-type-argument-stringp-1
 sudo apt-get -y install g++
 
-#TODO: install packages somehow automatically
 sudo apt-get -y install emacs24
 
 . $DIR/git_inst.sh
