@@ -1,9 +1,13 @@
 #!/bin/bash
-set -x # Print each command
 
+# Config
 EMAIL="janschlenker1990@gmail.com"
-LAST_PENCIL_VERSION="2.0.5"
+SMART_DATO_DIR="$HOME/Smart_Dato"
+# LAST_PENCIL_VERSION="2.0.5"
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+set -x # Print each command
 
 sudo apt-get -y update
 sudo apt-get -y dist-upgrade

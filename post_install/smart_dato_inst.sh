@@ -1,14 +1,28 @@
 #!/bin/bash
 
 while true; do
-    read -p "Do you wish to install this program?" yn
+    read -p "Do you wish to install programes for smart dato? If yes, please add your public key to Bitbucket first (https://bitbucket.org/account/user/YarnSeemannsgarn/ssh-keys/) !" yn
     case $yn in
         [Yy]* )
+	    mkdir -p $SMART_DATO_DIR
+
+	    #############
+	    ### Omest ###
+	    #############
+	    
+	    cd $SMART_DATO_DIR
+
+	    git clone git@bitbucket.org:smartdato/omest.git
+	    
 	    sudo apt-get -y install php
 
 	    sudo apt-get -y install mysql-server
 
-	    # sudo apt-get -y install sqlite3 
+	    # sudo apt-get -y install sqlite3
+
+	    # sudo apt-get -y install sqlitebrowser
+
+	    # sudo apt-get -y install lighttpd 
 
 	    sudo apt-get -y install php-mbstring
 
@@ -28,13 +42,11 @@ while true; do
 
 	    sudo apt-get -y install nodejs-legacy 
 
-	    # sudo apt-get -y install sqlitebrowser
-
-	    # sudo apt-get -y install lighttpd 
-
 	    sudo apt-get -y install php-gd
 
 	    sudo apt-get -y install php-gettext
+
+	    sudo apt-get -y install php-soap
 
 	    # sudo apt-get -y install mysql-workbench
 
@@ -60,6 +72,31 @@ while true; do
 	    sudo service apache2 restart
 
 	    . $DIR/composer_inst.sh
+
+	    cd $SMART_DATO_DIR/omest/www
+
+	    composer install
+
+	    ##########################
+	    ### Onlinestore - Odoo ###
+	    ##########################
+
+	    sudo apt-get -y install postgresql
+
+	    # Odoo
+	    wget -O - https://nightly.odoo.com/odoo.key | sudo apt-key add -
+	    sudo sh -c 'echo "deb http://nightly.odoo.com/9.0/nightly/deb/ ./" >> /etc/apt/sources.list'
+	    sudo apt-get update
+	    sudo apt-get -y install odoo
+	    sudo apt-get -y install wkhtmltopdf
+
+	    sudo -u postgres createuser -P -d odoo
+
+	    # Clone repository and configure
+	    cd $SMART_DATO_DIR
+	    git clone git@bitbucket.org:smartdato/onlinestore-odoo.git
+	    cp odoo-server.conf.example odoo-server.conf
+	    
 	    break;;
 	
         [Nn]* ) exit;;
