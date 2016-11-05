@@ -45,6 +45,7 @@
 (require 'yasnippet)
 (require 'auto-complete-c-headers)
 (require 'php-mode)
+(require 'cc-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; ********* General  ********* ;;;;;;;;;;;;;
@@ -62,7 +63,8 @@
 (semantic-mode 1)
 
 ;; Tab settings
-(setq tab-width 4)
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
 
 ;; Keybindings to easily resize windows
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
@@ -80,10 +82,13 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; ********* C/C++ ********* ;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ; let's define a function which initializes auto-complete-c-headers and gets called for c/c++ hooks
 (defun my:ac-c-header-init ()
   (add-to-list 'ac-sources 'ac-source-c-headers)
   (add-to-list 'achead:include-directories '"/usr/lib/gcc/x86_64-linux-gnu/4.8/include")
+  (setq c-basic-offset 4)
+  (c-set-offset 'access-label '/)
 )
 ; now let's call this function from c/c++ hooks
 (add-hook 'c++-mode-hook 'my:ac-c-header-init)
