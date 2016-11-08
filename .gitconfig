@@ -1,19 +1,19 @@
 [user]
-	name = YarnSeemannsgarn
-	email = janschlenker1990@gmail.com
+    name = YarnSeemannsgarn
+    email = janschlenker1990@gmail.com
 [color]
-	ui = auto
+    ui = auto
 [pack]
-	threads = 0
+    threads = 0
 [push]
-	default = simple
+    default = simple
 [core]
-        editor = emacs
+    editor = emacs
 [alias]
-	co = checkout
-	c = commit
-	b = branch
-	s = status
-	d = diff
-	tree = log --branches --decorate --graph --tags
-	t = log --branches --decorate --graph --tags
+    co = checkout
+    c = commit
+    b = branch
+    s = status
+    d = diff
+    tree = log --branches --decorate --graph --tags
+    t = log --branches --decorate --graph --tags

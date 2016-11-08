@@ -25,7 +25,7 @@ sudo apt-get -y install nautilus-dropbox
 
 #TODO: add config file /keepassx/config.ini
 sudo apt-get -y install keepassx
- 
+
 # Normal flash player plugin doesn't work anymore
 sudo apt-get -y install pepperflashplugin-nonfree
 
@@ -64,6 +64,7 @@ sudo apt-get -y install pinta
 # Ubuntu needs canonical partner for Skype: https://wiki.ubuntuusers.de/Canonical_Partner/
 # sudo add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner"
 # sudo apt-get update
+
 sudo apt-get -y install skype
 
 sudo apt-get -y install redshift redshift-gtk geoclue-2.0

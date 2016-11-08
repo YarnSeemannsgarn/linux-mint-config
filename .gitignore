@@ -17,7 +17,6 @@
 !/.ssh/
 /.ssh/*
 !/.ssh/config
-!/.cinnamon/ # for LinuxMint
 
 # Other
 !/update.sh
