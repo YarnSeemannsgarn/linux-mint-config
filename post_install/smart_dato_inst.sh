@@ -73,11 +73,11 @@ while true; do
 	        sudo service apache2 restart
 
             # Composer and npm
-	        . $DIR/composer_inst.sh
+            . $DIR/composer_inst.sh
 
-	        cd $SMART_DATO_DIR/omest/www
+            cd $SMART_DATO_DIR/omest/www
 
-	        composer install
+            composer install
 
             npm install
 
@@ -85,24 +85,29 @@ while true; do
 
             . $DIR/soap_ui_inst.sh
 
+            # PHP Storm
+
+            . $DIR/php_storm_inst.sh
+
             sudo apt-get -y install filezilla 
 
-	        ##########################
-	        ### Onlinestore - Odoo ###
-	        ##########################
+            ##########################
+            ### Onlinestore - Odoo ###
+            ##########################
 
-	        sudo apt-get -y install postgresql
+            sudo apt-get -y install postgresql
 
-	        # Odoo
-	        wget -O - https://nightly.odoo.com/odoo.key | sudo apt-key add -
-	        sudo sh -c 'echo "deb http://nightly.odoo.com/9.0/nightly/deb/ ./" >> /etc/apt/sources.list'
-	        sudo apt-get update
-	        sudo apt-get -y install odoo
+            # Odoo
+            wget -O - https://nightly.odoo.com/odoo.key | sudo apt-key add -
+            sudo sh -c 'echo "deb http://nightly.odoo.com/9.0/nightly/deb/ ./" >> /etc/apt/sources.list'
+            sudo apt-get update
+            sudo apt-get -y install odoo
 
-	        # Clone repository and configure
-	        cd $SMART_DATO_DIR
-	        git clone git@bitbucket.org:smartdato/onlinestore-odoo.git
-	        cp odoo-server.conf.example odoo-server.conf
+            # Clone repository and configure
+            cd $SMART_DATO_DIR
+            git clone git@bitbucket.org:smartdato/onlinestore-odoo.git
+            cd $SMART_DATO_DIR/onlinestore-odoo/
+            cp odoo-server.conf.example odoo-server.conf
 
             read -p "Chrome must be installed manually =/ Press any key to continue... " -n1 -s
             read -p "Wkhtmltopdf must be installed manually to work for odoo =/ Follow the instructions on https://www.odoo.com/documentation/10.0/setup/install.html#deb. Press any key to continue... " -n1 -s

@@ -17,8 +17,8 @@ while true; do
             fileName=SoapUI-x64-${LAST_SOAP_UI_VERSION}.sh
             sudo wget http://cdn01.downloads.smartbear.com/soapui/${LAST_SOAP_UI_VERSION}/${fileName}
             sudo chown $USER:$USER $fileName
-            chmod $fileName
-            ./$filename
+            chmod +x $fileName
+            sudo ./$filename
             read -p "Don't forget to add a desktop symbol;) Press any key to continue... " -n1 -s
             break;;
         * )

@@ -10,9 +10,9 @@ then
     php composer-setup.php --quiet
     RESULT=$?
     rm composer-setup.php
-    exit $RESULT
+    sudo mv composer.phar /bin/
+    sudo ln -s /bin/composer.phar /bin/composer
 else
     >&2 echo 'ERROR: Invalid installer signature'
     rm composer-setup.php
-    exit 1
 fi
