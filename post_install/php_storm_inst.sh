@@ -18,7 +18,7 @@ while true; do
             sudo wget https://download.jetbrains.com/webide/${fileName}.tar.gz
             sudo tar xfz ${fileName}.tar.gz
             sudo chown -R $USER:$USER PhpStorm-*
-            rm ${fileName}.tar.gz
+            sudo rm ${fileName}.tar.gz
             read -p "Don't forget to add a desktop symbol;) Press any key to continue... " -n1 -s
             break;;
         * )
