@@ -53,7 +53,7 @@ sudo apt-get -y install brasero
 sudo apt-get -y install xournal
 
 # Other webbrowser, to check website development
-sudo apt-get -y install chromium-browser chromium-browser-l10n
+# sudo apt-get -y install chromium-browser chromium-browser-l10n
 
 sudo apt-get -y install default-jdk
 

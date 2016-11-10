@@ -109,6 +109,11 @@ while true; do
             cd $SMART_DATO_DIR/onlinestore-odoo/
             cp odoo-server.conf.example odoo-server.conf
 
+            # Sstp
+            sudo add-apt-repository ppa:eivnaes/network-manager-sstp
+            sudo apt-get update
+            sudo apt-get install sstp-client network-manager-sstp network-manager-sstp-gnome
+
             read -p "Chrome must be installed manually =/ Press any key to continue... " -n1 -s
             read -p "Wkhtmltopdf must be installed manually to work for odoo =/ Follow the instructions on https://www.odoo.com/documentation/10.0/setup/install.html#deb. Press any key to continue... " -n1 -s
 	        
