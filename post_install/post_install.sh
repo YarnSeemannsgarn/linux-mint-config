@@ -26,8 +26,7 @@ sudo apt-get -y install nautilus-dropbox
 #TODO: add config file /keepassx/config.ini
 sudo apt-get -y install keepassx
 
-# Normal flash player plugin doesn't work anymore
-sudo apt-get -y install pepperflashplugin-nonfree
+sudo apt-get -y flashplugin-installer 
 
 # Included in Linux Mint defaultly, but not in Ubuntu
 # Use e.g. to export jpeg as pdf
