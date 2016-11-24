@@ -35,7 +35,7 @@ sudo apt-get -y install gimp
 sudo apt-get -y install texlive texlive-lang-german texlive-latex-extra lmodern latex-xcolor pgf
 
 # Use for slow computers
-sudo apt-get -y install xfce4
+# sudo apt-get -y install xfce4
 
 # Add, because of sizing issues in LibreDraw
 sudo apt-get -y install pdfshuffler
@@ -49,8 +49,6 @@ sudo apt-get -y install libreoffice-l10n-de
 
 # Burn programme - defaultly included in Ubuntu, but noteworthy for other distributions
 sudo apt-get -y install brasero
-
-sudo apt-get -y install xournal
 
 # Other webbrowser, to check website development
 # sudo apt-get -y install chromium-browser chromium-browser-l10n
@@ -74,7 +72,10 @@ sudo apt-get -y install libatk-adaptor libgail-common
 
 sudo apt-get -y install libatk-adaptor:i386 libgail-common:i386
 
-sudo apt-get -y install valgrind 
+sudo apt-get -y install valgrind
+
+# PDF Editor MasterPDFEditor
+read -p "Please install MasterPDFEditor manually from: https://code-industry.net/free-pdf-editor/"
 
 # This repositories I need when I work for smart dato
 . $DIR/smart_dato_inst.sh
