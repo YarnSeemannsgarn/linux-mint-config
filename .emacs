@@ -23,7 +23,7 @@
 ; Taken from http://stackoverflow.com/questions/10092322/how-to-automatically-install-emacs-packages-by-specifying-a-list-of-package-name
 
 ; Install required packages packages automaticaly
-(setq package-list '(package auto-complete yasnippet auto-complete-c-headers php-mode))
+(setq package-list '(package auto-complete yasnippet auto-complete-c-headers php-mode cc-mode web-mode))
 
 ; list the repositories containing them
 (setq package-archives '(("melpa" . "http://melpa.milkbox.net/packages/")))
@@ -46,6 +46,7 @@
 (require 'auto-complete-c-headers)
 (require 'php-mode)
 (require 'cc-mode)
+(require 'web-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; ********* General  ********* ;;;;;;;;;;;;;
@@ -65,6 +66,7 @@
 ;; Tab settings
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
+(setq-default nxml-child-indent 4)
 
 ;; Keybindings to easily resize windows
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
@@ -83,27 +85,14 @@
 ;;; ********* C/C++ ********* ;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; let's define a function which initializes auto-complete-c-headers and gets called for c/c++ hooks
-(defun my:ac-c-header-init ()
-  (add-to-list 'ac-sources 'ac-source-c-headers)
-  (add-to-list 'achead:include-directories '"/usr/lib/gcc/x86_64-linux-gnu/4.8/include")
-  (setq c-basic-offset 4)
-  (c-set-offset 'access-label '/)
-)
-; now let's call this function from c/c++ hooks
-(add-hook 'c++-mode-hook 'my:ac-c-header-init)
-(add-hook 'c-mode-hook 'my:ac-c-header-init)
-
-; let's define a function which adds semantic as a suggestion backend to auto complete
-; and hook this function to c-mode-common-hook
-(defun my:add-semantic-to-autocomplete()
-  (add-to-list 'ac-sources 'ac-source-semantic)
-)
-(add-hook 'c-mode-common-hook 'my:add-semantic-to-autocomplete)
+(setq c-basic-offset 4)
+(c-set-offset 'access-label '/)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; ********* Web Development ********* ;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
 
 ;; Scss-mode (https://github.com/antonj/scss-mode/)
 ;(require 'scss-mode)
