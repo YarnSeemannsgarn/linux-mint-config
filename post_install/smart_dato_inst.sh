@@ -77,9 +77,16 @@ while true; do
 
             cd $SMART_DATO_DIR/omest/www
 
+            cp .env.example .env
+
+            php artisan key:generate
+
             composer install
 
-            npm install
+            npm update
+
+            sudo npm install -g gulp
+            
 
             # SOAP UI
 
@@ -95,13 +102,19 @@ while true; do
             ### Onlinestore - Odoo ###
             ##########################
 
+            # Postgresql
             sudo apt-get -y install postgresql
+            sudo apt-get -y install phppgadmin
 
             # Odoo
             wget -O - https://nightly.odoo.com/odoo.key | sudo apt-key add -
             sudo sh -c 'echo "deb http://nightly.odoo.com/9.0/nightly/deb/ ./" >> /etc/apt/sources.list'
             sudo apt-get update
             sudo apt-get -y install odoo
+
+            # Install wkthmltopdf with version 0.12.1 (recommended for odoo)
+            wget http://download.gna.org/wkhtmltopdf/0.12/0.12.1/wkhtmltox-0.12.1_linux-trusty-amd64.deb
+            sudo dpkg -i wkhtmltox-0.12.1_linux-trusty-amd64.deb
 
             # Clone repository and configure
             cd $SMART_DATO_DIR
