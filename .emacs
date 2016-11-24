@@ -23,10 +23,12 @@
 ; Taken from http://stackoverflow.com/questions/10092322/how-to-automatically-install-emacs-packages-by-specifying-a-list-of-package-name
 
 ; Install required packages packages automaticaly
-(setq package-list '(package auto-complete yasnippet auto-complete-c-headers php-mode cc-mode web-mode))
+(setq package-list '(package auto-complete yasnippet auto-complete-c-headers php-mode cc-mode web-mode ))
 
 ; list the repositories containing them
-(setq package-archives '(("melpa" . "http://melpa.milkbox.net/packages/")))
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("melpa" . "http://melpa.org/packages/")))
       
 ; activate all the packages (in particular autoloads)
 (package-initialize)
@@ -47,6 +49,9 @@
 (require 'php-mode)
 (require 'cc-mode)
 (require 'web-mode)
+
+;; Not in any directory
+(load-file "~/.emacs.d/auto-complete-plus/auto-complete+.el")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; ********* General  ********* ;;;;;;;;;;;;;
