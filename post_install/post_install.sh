@@ -66,8 +66,6 @@ sudo apt-get -y install skype
 
 sudo apt-get -y install redshift redshift-gtk geoclue-2.0
 
-sudo apt-get -y install hamster-indicator hamster-applet
-
 sudo apt-get -y install libatk-adaptor libgail-common
 
 sudo apt-get -y install libatk-adaptor:i386 libgail-common:i386

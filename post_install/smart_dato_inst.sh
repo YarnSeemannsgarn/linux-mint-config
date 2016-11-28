@@ -49,6 +49,10 @@ while true; do
 
 	        sudo apt-get -y install php-soap
 
+            sudo apt-get -y install php-curl
+
+            sudo apt-get -y install phpunit
+
 	        # sudo apt-get -y install mysql-workbench
 
 	        sudo apt-get -y install apache2 apache2-doc 
