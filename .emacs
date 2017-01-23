@@ -72,6 +72,16 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq-default nxml-child-indent 4)
+(setq web-mode-code-indent-offset 4)
+
+;; For changing tab settings in buffer
+(defun my-set-indents (n)
+  (interactive "p")
+  (setq n (if n (prefix-numeric-value n) 2))
+  (setq-default tab-width n)
+  (setq-default nxml-child-indent n)
+  (setq web-mode-code-indent-offset n)
+  )
 
 ;; Keybindings to easily resize windows
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
