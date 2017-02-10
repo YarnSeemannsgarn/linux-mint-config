@@ -13,7 +13,7 @@
     co = checkout
     c = commit
     b = branch
-    s = status
+    s = !git status && git stash list
     d = diff
     tree = log --branches --decorate --graph --tags
     t = log --branches --decorate --graph --tags
