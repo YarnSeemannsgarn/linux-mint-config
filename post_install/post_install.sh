@@ -72,6 +72,12 @@ sudo apt-get -y install libatk-adaptor:i386 libgail-common:i386
 
 sudo apt-get -y install valgrind
 
+# Add indicator-sticknotes
+sudo apt-add-repository -y ppa:umang/indicator-stickynotes
+sudo apt-get -y update
+sudo apt-get -y install indicator-stickynotes
+
+
 # PDF Editor MasterPDFEditor
 read -p "Please install MasterPDFEditor manually from: https://code-industry.net/free-pdf-editor/"
 
