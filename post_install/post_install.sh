@@ -62,8 +62,6 @@ sudo apt-get -y install pinta
 # sudo add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner"
 # sudo apt-get update
 
-sudo apt-get -y install skype
-
 sudo apt-get -y install redshift redshift-gtk geoclue-2.0
 
 sudo apt-get -y install libatk-adaptor libgail-common
@@ -80,6 +78,10 @@ sudo apt-get -y install indicator-stickynotes
 
 # PDF Editor MasterPDFEditor
 read -p "Please install MasterPDFEditor manually from: https://code-industry.net/free-pdf-editor/"
+
+# PDF Editor MasterPDFEditor
+read -p "Please install Skype manually from: https://www.skype.com/en/download-skype/skype-for-linux/downloading/?type=weblinux-deb"
+
 
 # This repositories I need when I work for smart dato
 . $DIR/smart_dato_inst.sh
