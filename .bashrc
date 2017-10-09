@@ -133,3 +133,5 @@ HISTTIMEFORMAT="%F %T "
 # Composer, PHPStorm
 PATH=$PATH:/home/yarn/.config/composer/vendor/bin:/opt/PhpStorm/bin
 export PATH
+
+alias cls='printf "\033c"'
