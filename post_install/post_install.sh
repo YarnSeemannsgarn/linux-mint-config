@@ -16,7 +16,7 @@ sudo apt-get -y autoclean
 # See here: http://stackoverflow.com/questions/14214714/cedet-wrong-type-argument-stringp-1
 sudo apt-get -y install g++
 
-sudo apt-get -y install emacs24
+sudo apt-get -y install emacs
 
 . $DIR/git_inst.sh
 
@@ -26,7 +26,8 @@ sudo apt-get -y install nautilus-dropbox
 #TODO: add config file /keepassx/config.ini
 sudo apt-get -y install keepassx
 
-sudo apt-get -y flashplugin-installer 
+# Only for Ubuntu
+# sudo apt-get -y flashplugin-installer 
 
 # Included in Linux Mint defaultly, but not in Ubuntu
 # Use e.g. to export jpeg as pdf
@@ -51,9 +52,9 @@ sudo apt-get -y install libreoffice-l10n-de
 sudo apt-get -y install brasero
 
 # Other webbrowser, to check website development
-# sudo apt-get -y install chromium-browser chromium-browser-l10n
+sudo apt-get -y install chromium-browser chromium-browser-l10n chromium-codecs-ffmpeg chromium-codecs-ffmpeg-extra 
 
-sudo apt-get -y install default-jdk
+sudo apt-get -y install openjdk-9-jre 
 
 # Simple image editor like paint
 sudo apt-get -y install pinta
@@ -64,11 +65,11 @@ sudo apt-get -y install pinta
 
 sudo apt-get -y install redshift redshift-gtk geoclue-2.0
 
-sudo apt-get -y install libatk-adaptor libgail-common
+# sudo apt-get -y install libatk-adaptor libgail-common
 
-sudo apt-get -y install libatk-adaptor:i386 libgail-common:i386
+# sudo apt-get -y install libatk-adaptor:i386 libgail-common:i386
 
-sudo apt-get -y install valgrind
+# sudo apt-get -y install valgrind
 
 # Add indicator-sticknotes
 sudo apt-add-repository -y ppa:umang/indicator-stickynotes
