@@ -23,6 +23,11 @@ sudo apt-get -y install emacs
 
 . $DIR/git_inst.sh
 
+# Skype
+wget https://repo.skype.com/latest/skypeforlinux-64.deb
+sudo apt install skypeforlinux-64.deb
+rm skypeforlinux-64.deb
+
 #TODO: find and add config file
 sudo apt-get -y install nautilus-dropbox
 
@@ -85,6 +90,3 @@ sudo apt-get -y install indicator-stickynotes
 
 # PDF Editor MasterPDFEditor
 read -p "Please install MasterPDFEditor manually from: https://code-industry.net/free-pdf-editor/"
-
-# Skype
-read -p "Please install Skype manually from: https://www.skype.com/en/download-skype/skype-for-linux/downloading/?type=weblinux-deb"
