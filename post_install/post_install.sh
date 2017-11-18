@@ -65,24 +65,23 @@ sudo apt-get -y install pinta
 
 sudo apt-get -y install redshift redshift-gtk geoclue-2.0
 
-# sudo apt-get -y install libatk-adaptor libgail-common
-
-# sudo apt-get -y install libatk-adaptor:i386 libgail-common:i386
-
-# sudo apt-get -y install valgrind
-
 # Add indicator-sticknotes
 sudo apt-add-repository -y ppa:umang/indicator-stickynotes
 sudo apt-get -y update
 sudo apt-get -y install indicator-stickynotes
 
+# Crypto
+. $DIR/exodus_inst.sh
+
+# Jetbrains
+. $DIR/php_storm_inst.sh
+. $DIR/pycharm_inst.sh
+
+# This repositories I need when I work for Smart dato
+. $DIR/smart_dato_inst.sh
 
 # PDF Editor MasterPDFEditor
 read -p "Please install MasterPDFEditor manually from: https://code-industry.net/free-pdf-editor/"
 
-# PDF Editor MasterPDFEditor
+# Skype
 read -p "Please install Skype manually from: https://www.skype.com/en/download-skype/skype-for-linux/downloading/?type=weblinux-deb"
-
-
-# This repositories I need when I work for smart dato
-. $DIR/smart_dato_inst.sh
