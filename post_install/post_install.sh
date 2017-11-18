@@ -7,6 +7,9 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Read config
 source $DIR/config.cfg
 
+# Add adaptions to .basrhc
+cat $DIR/.bashrc_custom >> $HOME/.bashrc
+
 # First upgrade the whole system
 sudo apt-get -y update
 sudo apt-get -y dist-upgrade

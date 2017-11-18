@@ -10,16 +10,14 @@
 # Directories
 !/post_install
 
-# Configs
-!/.bashrc
+# Emacs
 !/.emacs
-!/.profile
+!/.emacs.d/auto-complete-plus/
 
+# SSH
 !/.ssh/
 /.ssh/*
 !/.ssh/config
 
 # Other
 !/update.sh
-
-!/.emacs.d/auto-complete-plus/
