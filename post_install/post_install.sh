@@ -52,15 +52,12 @@ sudo apt-get -y install pdfshuffler
 # German language package
 sudo apt-get -y install libreoffice-l10n-de
 
-#. $DIR/vbox_inst.sh
-
-#. $DIR/evoluspencil_inst.sh
-
 # Burn programme - defaultly included in Ubuntu, but noteworthy for other distributions
 sudo apt-get -y install brasero
 
 # Other webbrowser, to check website development
-sudo apt-get -y install chromium-browser chromium-browser-l10n chromium-codecs-ffmpeg chromium-codecs-ffmpeg-extra 
+# chromium-codecs-ffmpeg chromium-codecs-ffmpeg-extra  --> couldn't be installed due to unmet dependencies
+sudo apt-get -y install chromium-browser chromium-browser-l10n
 
 sudo apt-get -y install openjdk-9-jre 
 
