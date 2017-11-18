@@ -5,7 +5,7 @@ while true; do
     case $yn in
         [Yy]* )
             
-	        mkdir -p $SMART_DATO_DIR
+	    mkdir -p $SMART_DATO_DIR
             cd $SMART_DATO_DIR
 
             ###################
@@ -13,9 +13,9 @@ while true; do
             ###################
 
             # Sstp
-            sudo add-apt-repository ppa:eivnaes/network-manager-sstp
-            sudo apt-get update
-            sudo apt-get install sstp-client network-manager-sstp network-manager-sstp-gnome
+            sudo add-apt-repository -y ppa:eivnaes/network-manager-sstp
+            sudo apt-get -y update
+            sudo apt-get -y install sstp-client network-manager-sstp network-manager-sstp-gnome
 
             ################
             ### MT SPORT ###
@@ -27,9 +27,9 @@ while true; do
 
             sudo apt-get -y install filezilla
 
-            git clone git@bitbucket.org:smartdato/mt-sport-odoo.git
+            hg clone ssh://hg@bitbucket.org/smartdato/mt-sport-odoo
 	        
-	        break;;
+	    break;;
 	    
         [Nn]* ) exit;;
 	    * ) echo "Please answer yes or no.";;
