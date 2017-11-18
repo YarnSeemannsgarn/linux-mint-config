@@ -25,7 +25,7 @@ sudo apt-get -y install emacs
 
 # Skype
 wget https://repo.skype.com/latest/skypeforlinux-64.deb
-sudo apt install skypeforlinux-64.deb
+sudo apt install $DIR/skypeforlinux-64.deb
 rm skypeforlinux-64.deb
 
 #TODO: find and add config file
