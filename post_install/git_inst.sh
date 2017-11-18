@@ -14,3 +14,5 @@ git remote add origin git@github.com:YarnSeemannsgarn/ubuntu-config.git
 # Instead of pull use fetch and reset to overwrite local files
 git fetch --all
 git reset --hard origin/master
+
+git submodule update --init --recursive
