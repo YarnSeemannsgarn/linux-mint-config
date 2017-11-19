@@ -84,6 +84,9 @@ sudo apt-get -y install indicator-stickynotes
 . $DIR/php_storm_inst.sh
 . $DIR/pycharm_inst.sh
 
+# Teamviewer
+. $DIR/teamviewer_inst.sh
+
 # This repositories I need when I work for Smart dato
 . $DIR/smart_dato_inst.sh
 
