@@ -25,7 +25,7 @@ while true; do
 	    
             sudo apt-get -y install hg
 
-            sudo apt-get -y install phppgadmin
+            sudo apt-get -y install sudo apt-get install pgadmin3
 
             sudo apt-get -y install filezilla
 
