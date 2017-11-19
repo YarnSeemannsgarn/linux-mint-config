@@ -26,3 +26,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 # Bash completion
 sudo curl -L https://raw.githubusercontent.com/docker/compose/${LAST_DOCKER_COMPOSE_VERSION}/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose
+
+# Manage Docker as a non-root user
+sudo groupadd docker
+sudo usermod -aG docker $USER
