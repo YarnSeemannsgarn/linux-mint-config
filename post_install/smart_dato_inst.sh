@@ -25,7 +25,7 @@ while true; do
 	    
             sudo apt-get -y install mercurial
 
-            sudo apt-get -y install sudo apt-get install pgadmin3
+            sudo apt-get -y install pgadmin3
 
             sudo apt-get -y install filezilla
 
