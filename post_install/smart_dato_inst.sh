@@ -23,7 +23,7 @@ while true; do
 
             . $DIR/docker_inst.sh
 	    
-            sudo apt-get -y install hg
+            sudo apt-get -y install mercurial
 
             sudo apt-get -y install sudo apt-get install pgadmin3
 
