@@ -15,6 +15,10 @@ sudo apt-get -y update
 sudo apt-get -y dist-upgrade
 sudo apt-get -y autoclean
 
+# Install chromium first, because password for GitHub Account is saved here
+# chromium-codecs-ffmpeg chromium-codecs-ffmpeg-extra  --> couldn't be installed due to unmet dependencies
+sudo apt-get -y install chromium-browser chromium-browser-l10n
+
 # Must be installed before running emacs, otherwise there will be an error
 # See here: http://stackoverflow.com/questions/14214714/cedet-wrong-type-argument-stringp-1
 sudo apt-get -y install g++
@@ -54,10 +58,6 @@ sudo apt-get -y install libreoffice-l10n-de
 
 # Burn programme - defaultly included in Ubuntu, but noteworthy for other distributions
 sudo apt-get -y install brasero
-
-# Other webbrowser, to check website development
-# chromium-codecs-ffmpeg chromium-codecs-ffmpeg-extra  --> couldn't be installed due to unmet dependencies
-sudo apt-get -y install chromium-browser chromium-browser-l10n
 
 sudo apt-get -y install openjdk-9-jre 
 
