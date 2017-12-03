@@ -3,6 +3,7 @@
 # name and email, e.g.
 # username = Jane Doe <jdoe@example.com>
 username = Jan Schlenker <jan.schlenker@smart-dato.com>
+editor = emacs
 
 [extensions]
 # uncomment these lines to enable some popular extensions
