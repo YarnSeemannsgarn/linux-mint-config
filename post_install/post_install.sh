@@ -25,15 +25,14 @@ sudo apt-get -y install g++
 
 sudo apt-get -y install emacs
 
+sudo apt-get -y install nemo-dropbox
+
 . $DIR/git_inst.sh
 
 # Skype
 wget https://repo.skype.com/latest/skypeforlinux-64.deb
 sudo apt install $DIR/skypeforlinux-64.deb
 rm skypeforlinux-64.deb
-
-#TODO: find and add config file
-sudo apt-get -y install nautilus-dropbox
 
 #TODO: add config file /keepassx/config.ini
 sudo apt-get -y install keepassx
