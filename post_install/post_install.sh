@@ -17,7 +17,7 @@ sudo apt-get -y autoclean
 
 # Install chromium first, because password for GitHub Account is saved here
 # chromium-codecs-ffmpeg chromium-codecs-ffmpeg-extra  --> couldn't be installed due to unmet dependencies
-sudo apt-get -y install chromium-browser chromium-browser-l10n
+sudo apt-get -y install chromium-browser
 
 # Must be installed before running emacs, otherwise there will be an error
 # See here: http://stackoverflow.com/questions/14214714/cedet-wrong-type-argument-stringp-1
