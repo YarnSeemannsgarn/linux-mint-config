@@ -87,8 +87,5 @@ sudo apt-get -y install indicator-stickynotes
 # Teamviewer
 . $DIR/teamviewer_inst.sh
 
-# This repositories I need when I work for Smart dato
-. $DIR/smart_dato_inst.sh
-
 # PDF Editor MasterPDFEditor
 read -p "Please install MasterPDFEditor manually from: https://code-industry.net/free-pdf-editor/"
