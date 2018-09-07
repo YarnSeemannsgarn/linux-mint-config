@@ -46,9 +46,6 @@ sudo apt-get -y install gimp
 
 sudo apt-get -y install texlive texlive-lang-german texlive-latex-extra lmodern latex-xcolor pgf
 
-# Use for slow computers
-# sudo apt-get -y install xfce4
-
 # Add, because of sizing issues in LibreDraw
 sudo apt-get -y install pdfshuffler
 
