@@ -5,3 +5,7 @@ HISTTIMEFORMAT="%F %T "
 
 # Clear screen
 alias cls='printf "\033c"'
+
+# ls aliases
+alias la='ls -la'
+alias ll='ls -la'
