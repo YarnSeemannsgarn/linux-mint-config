@@ -46,9 +46,6 @@ sudo apt-get -y install gimp
 
 sudo apt-get -y install texlive texlive-lang-german texlive-latex-extra lmodern latex-xcolor pgf
 
-# German language package
-sudo apt-get -y install libreoffice-l10n-de
-
 # Burn programme - defaultly included in Ubuntu, but noteworthy for other distributions
 sudo apt-get -y install brasero
 
