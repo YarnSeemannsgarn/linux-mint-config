@@ -7,7 +7,7 @@ ssh-add ~/.ssh/id_rsa
 
 # Add public key to GitHub
 curl -u "${EMAIL}" --data "{\"title\":\"$(whoami)@$(hostname)\",\"key\":\"$(cat ${HOME}/.ssh/id_rsa.pub)\"}" https://api.github.com/user/keys
-ssh -T git@github.com
+ssh -o "StrictHostKeyChecking no" -T git@github.com
 
 # Install git
 sudo apt-get -y install git
