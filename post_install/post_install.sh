@@ -58,7 +58,7 @@ sudo apt-get -y install pinta
 
 sudo apt-get -y install redshift redshift-gtk geoclue-2.0
 
-sudo apt-get -y install gcolor2
+sudo apt-get -y install gpick
 
 # Add indicator-sticknotes
 sudo apt-add-repository -y ppa:umang/indicator-stickynotes
