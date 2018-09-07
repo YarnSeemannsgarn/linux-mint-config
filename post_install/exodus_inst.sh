@@ -16,7 +16,7 @@ while true; do
             cd /opt/
             fileName=exodus-linux-x64-${LAST_EXODUS_VERSION}
             sudo wget https://exodusbin.azureedge.net/releases/${fileName}.zip
-            sudo unzip ${fileName}.zip
+            sudo unzip ${fileName}.zip # TODO: change to unzzip for manjaro
             sudo chown -R $USER:$USER Exodus-linux-x64*
             sudo rm ${fileName}.zip
             read -p "Don't forget to add a desktop symbol;) Press any key to continue... " -n1 -s
