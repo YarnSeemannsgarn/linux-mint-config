@@ -49,8 +49,6 @@ sudo apt-get -y install texlive texlive-lang-german texlive-latex-extra lmodern 
 # Burn programme - defaultly included in Ubuntu, but noteworthy for other distributions
 sudo apt-get -y install brasero
 
-sudo apt-get -y install openjdk-9-jre 
-
 # Simple image editor like paint
 sudo apt-get -y install pinta
 
