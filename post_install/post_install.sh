@@ -68,10 +68,6 @@ sudo apt-get -y install indicator-stickynotes
 # Crypto
 . $DIR/exodus_inst.sh
 
-# Jetbrains
-. $DIR/php_storm_inst.sh
-. $DIR/pycharm_inst.sh
-
 # Teamviewer
 . $DIR/teamviewer_inst.sh
 
