@@ -67,5 +67,5 @@ sudo apt-get -y install teamviewer
 # Crypto
 . $DIR/exodus_inst.sh
 
-# PDF Editor MasterPDFEditor
-read -p "Please install MasterPDFEditor manually from: https://code-industry.net/free-pdf-editor/"
+# MasterPDFEditor
+. $DIR/master_pdf_editor_inst.sh
