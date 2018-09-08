@@ -11,4 +11,7 @@ gpick
 filezilla
 teamviewer
 screenruler
-
+python-pip
+python3-pip
+python-setuptools
+python3-setuptools
