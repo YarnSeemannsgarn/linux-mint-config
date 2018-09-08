@@ -9,9 +9,6 @@ ssh-add ~/.ssh/id_rsa
 curl -u "${EMAIL}" --data "{\"title\":\"$(whoami)@$(hostname)\",\"key\":\"$(cat ${HOME}/.ssh/id_rsa.pub)\"}" https://api.github.com/user/keys
 ssh -o "StrictHostKeyChecking no" -T git@github.com
 
-# Install git
-sudo apt-get -y install git
-
 # Download this repository into the correct location
 cd
 git init

@@ -1,0 +1,13 @@
+chromium-browser
+emacs
+nemo-dropbox
+keepassx
+git
+gimp
+texlive texlive-lang-german texlive-latex-extra lmodern
+pinta
+redshift redshift-gtk geoclue-2.0
+gpick
+filezilla
+teamviewer
+
