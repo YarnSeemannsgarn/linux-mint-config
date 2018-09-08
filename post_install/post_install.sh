@@ -27,3 +27,6 @@ do
 		$SCRIPT
 	fi
 done
+
+# Show final comments
+$DIR/final_comments.sh
