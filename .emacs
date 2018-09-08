@@ -1,17 +1,9 @@
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(ecb-options-version "2.40")
- '(inhibit-startup-screen t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; ********* Own customizations ********* ;;;
@@ -23,7 +15,7 @@
 ; Taken from http://stackoverflow.com/questions/10092322/how-to-automatically-install-emacs-packages-by-specifying-a-list-of-package-name
 
 ; Install required packages packages automaticaly
-(setq package-list '(package auto-complete yasnippet auto-complete-c-headers php-mode cc-mode web-mode ))
+(setq package-list '(package auto-complete yasnippet php-mode cc-mode web-mode ))
 
 ; list the repositories containing them
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
@@ -45,7 +37,6 @@
 (require 'package)
 (require 'auto-complete)
 (require 'yasnippet)
-(require 'auto-complete-c-headers)
 (require 'php-mode)
 (require 'cc-mode)
 (require 'web-mode)
@@ -59,6 +50,11 @@
 
 ;; Start in fullscreen
 (custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(inhibit-startup-screen t)
  '(initial-frame-alist (quote ((fullscreen . maximized)))))
 
 (xterm-mouse-mode 1)

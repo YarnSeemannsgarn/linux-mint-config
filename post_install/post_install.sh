@@ -27,15 +27,15 @@ sudo apt-get -y install emacs
 
 sudo apt-get -y install nemo-dropbox
 
+#TODO: add config file /keepassx/config.ini
+sudo apt-get -y install keepassx
+
 . $DIR/git_inst.sh
 
 # Skype
 wget https://repo.skype.com/latest/skypeforlinux-64.deb
 sudo apt install $DIR/skypeforlinux-64.deb
 rm skypeforlinux-64.deb
-
-#TODO: add config file /keepassx/config.ini
-sudo apt-get -y install keepassx
 
 # Only for Ubuntu
 # sudo apt-get -y flashplugin-installer 
@@ -46,8 +46,8 @@ sudo apt-get -y install gimp
 
 sudo apt-get -y install texlive texlive-lang-german texlive-latex-extra lmodern latex-xcolor pgf
 
-# Burn programme - defaultly included in Ubuntu, but noteworthy for other distributions
-sudo apt-get -y install brasero
+# Burn programme - defaultly included in Ubuntu, but noteworthy for other distributions --> depends on machine
+# sudo apt-get -y install brasero
 
 # Simple image editor like paint
 sudo apt-get -y install pinta
@@ -60,16 +60,12 @@ sudo apt-get -y install redshift redshift-gtk geoclue-2.0
 
 sudo apt-get -y install gpick
 
-# Add indicator-sticknotes
-sudo apt-add-repository -y ppa:umang/indicator-stickynotes
-sudo apt-get -y update
-sudo apt-get -y install indicator-stickynotes
+sudo apt-get -y install filezilla
+
+sudo apt-get -y install teamviewer
 
 # Crypto
 . $DIR/exodus_inst.sh
 
-# Teamviewer
-. $DIR/teamviewer_inst.sh
-
-# PDF Editor MasterPDFEditor
-read -p "Please install MasterPDFEditor manually from: https://code-industry.net/free-pdf-editor/"
+# MasterPDFEditor
+. $DIR/master_pdf_editor_inst.sh
