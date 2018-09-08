@@ -60,6 +60,10 @@ sudo apt-get -y install redshift redshift-gtk geoclue-2.0
 
 sudo apt-get -y install gpick
 
+sudo apt-get -y install filezilla
+
+sudo apt-get -y install teamviewer
+
 # Crypto
 . $DIR/exodus_inst.sh
 
