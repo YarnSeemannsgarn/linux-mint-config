@@ -27,15 +27,15 @@ sudo apt-get -y install emacs
 
 sudo apt-get -y install nemo-dropbox
 
+#TODO: add config file /keepassx/config.ini
+sudo apt-get -y install keepassx
+
 . $DIR/git_inst.sh
 
 # Skype
 wget https://repo.skype.com/latest/skypeforlinux-64.deb
 sudo apt install $DIR/skypeforlinux-64.deb
 rm skypeforlinux-64.deb
-
-#TODO: add config file /keepassx/config.ini
-sudo apt-get -y install keepassx
 
 # Only for Ubuntu
 # sudo apt-get -y flashplugin-installer 
