@@ -60,11 +60,6 @@ sudo apt-get -y install redshift redshift-gtk geoclue-2.0
 
 sudo apt-get -y install gpick
 
-# Add indicator-sticknotes
-sudo apt-add-repository -y ppa:umang/indicator-stickynotes
-sudo apt-get -y update
-sudo apt-get -y install indicator-stickynotes
-
 # Crypto
 . $DIR/exodus_inst.sh
 
