@@ -34,14 +34,6 @@
 (require 'cc-mode)
 (require 'web-mode)
 
-; Install auto-complete-c-headers due to installation instructions: https://github.com/mooz/auto-complete-c-headers
-(defun my:ac-c-headers-init ()
-  (require 'auto-complete-c-headers)
-  (add-to-list 'ac-sources 'ac-source-c-headers))
-
-(add-hook 'c++-mode-hook 'my:ac-c-headers-init)
-(add-hook 'c-mode-hook 'my:ac-c-headers-init)
-
 ;; Not in any directory
 (load-file "~/.emacs.d/auto-complete-plus/auto-complete+.el")
 
