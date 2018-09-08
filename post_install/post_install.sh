@@ -68,8 +68,5 @@ sudo apt-get -y install indicator-stickynotes
 # Crypto
 . $DIR/exodus_inst.sh
 
-# Teamviewer
-. $DIR/teamviewer_inst.sh
-
 # PDF Editor MasterPDFEditor
 read -p "Please install MasterPDFEditor manually from: https://code-industry.net/free-pdf-editor/"
