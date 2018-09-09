@@ -1,8 +1,5 @@
 
 ### OWN ADAPTIONS ###
-# Timestamp for history
-HISTTIMEFORMAT="%F %T "
-
 # Clear screen
 alias cls='printf "\033c"'
 
