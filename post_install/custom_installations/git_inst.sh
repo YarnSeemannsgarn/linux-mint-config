@@ -5,9 +5,11 @@ ssh-keygen -t rsa -C $EMAIL
 eval `ssh-agent -s`
 ssh-add ~/.ssh/id_rsa
 
-# Add public key to GitHub
-curl -u "${EMAIL}" --data "{\"title\":\"$(whoami)@$(hostname)\",\"key\":\"$(cat ${HOME}/.ssh/id_rsa.pub)\"}" https://api.github.com/user/keys
-ssh -o "StrictHostKeyChecking no" -T git@github.com
+# Add public key to GitHub and Bitbucket
+KEY_LABEL=$(whoami)@$(hostname)
+SSH_KEY=$(cat $HOME/.ssh/id_rsa.pub)
+curl -u "${EMAIL}" --data "{\"title\":\"$KEY_LABEL\",\"key\":\"$SSH_KEY\"}" https://api.github.com/user/keys
+curl --user JanSchlenkerSTI -X POST https://bitbucket.org/api/1.0/users/JanSchlenkerSTI/ssh-keys --data-urlencode "key=$SSH_KEY" --data-urlencode "label=$KEY_LABEL"
 
 # Download this repository into the correct location
 cd
