@@ -28,5 +28,14 @@ do
 	fi
 done
 
+# Run config adaptions
+for SCRIPT in $DIR/config_adaptions/*
+do
+    if [ -f $SCRIPT -a -x $SCRIPT ]
+	then
+		$SCRIPT
+	fi
+done
+
 # Show final comments
 $DIR/final_comments.sh
