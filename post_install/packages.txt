@@ -16,3 +16,4 @@ python3-pip
 python-setuptools
 python3-setuptools
 zsh
+dconf-editor
