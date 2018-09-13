@@ -1,3 +1,11 @@
 
+# Oh-my-zsh
+plugins=(
+  git
+  docker-compose
+)
+
+source $ZSH/oh-my-zsh.sh
+
 # Timestamp for history
 alias history='history -i'
