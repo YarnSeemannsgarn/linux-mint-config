@@ -92,6 +92,9 @@
 ;; Backup folder
 (setq backup-directory-alist `(("." . "~/.emacs_saves")))
 
+;; Auto refresh buffers when files are changed on disk
+(global-auto-revert-mode t)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; ********* C/C++ ********* ;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
