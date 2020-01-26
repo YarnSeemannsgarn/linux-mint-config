@@ -40,6 +40,8 @@
 (require 'php-mode)
 (require 'cc-mode)
 (require 'web-mode)
+(require 'markdown-mode)
+(require 'sparql-mode)
 
 ;; Not in any directory
 (load-file "~/.emacs.d/auto-complete-plus/auto-complete+.el")
@@ -55,7 +57,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t)
- '(initial-frame-alist (quote ((fullscreen . maximized)))))
+ '(initial-frame-alist (quote ((fullscreen . maximized))))
+ '(package-selected-packages
+   (quote
+    (sparql-mode yasnippet web-mode php-mode auto-complete))))
 
 (xterm-mouse-mode 1)
 (ac-config-default)
@@ -94,6 +99,10 @@
 
 ;; Auto refresh buffers when files are changed on disk
 (global-auto-revert-mode t)
+
+;; font sizing with Ctrl key and mouse scroll
+(global-set-key (kbd "<C-mouse-4>") 'text-scale-increase)
+(global-set-key (kbd "<C-mouse-5>") 'text-scale-decrease)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; ********* C/C++ ********* ;;;;;;;;;;;;;;;;
