@@ -10,10 +10,12 @@
 [core]
     editor = emacs
 [alias]
+    a = add
+    b = branch
     co = checkout
     c = commit
-    b = branch
-    s = !git status && git stash list
     d = diff
-    tree = log --branches --decorate --graph --tags
+    l = log
+    s = !git status && git stash list
     t = log --branches --decorate --graph --tags
+    tree = log --branches --decorate --graph --tags
