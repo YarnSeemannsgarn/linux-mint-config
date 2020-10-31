@@ -7,8 +7,6 @@ alias cls='printf "\033c"'
 alias la='ls -la'
 alias ll='ls -la'
 
-# docker aliases
+# Other aliases
 alias dco='docker-compose'
-
-# tree aliases
 alias t='tree'

@@ -1,8 +1,8 @@
 #!/bin/bash
 
-sudo apt-get -y update 
-sudo apt-get -y dist-upgrade 
-sudo apt-get -y autoclean
+apt update -y
+apt dist-upgrade -y
+apt autoclean -y
 
 cd
 git pull

@@ -10,13 +10,13 @@ PROGRAM_ADAPT_DIR=$DIR/program_adaptions
 source $DIR/config.cfg
 
 # Upgrade the whole system
-sudo apt-get -y update
-sudo apt-get -y dist-upgrade
-sudo apt-get -y autoclean
+apt update -y
+apt dist-upgrade -y
+apt autoclean -y
 
 # Install packages
-PACKAGES=$(sed -E '/^[[:blank:]]*(#|$)/d; s/#.*//' $DIR/packages.txt)
-sudo apt-get install $PACKAGES
+PACKAGES=$(cat $DIR/packages.txt)
+apt install -y $PACKAGES
 
 # Run custom installations
 for SCRIPT in $CUSTOM_INST_DIR/*

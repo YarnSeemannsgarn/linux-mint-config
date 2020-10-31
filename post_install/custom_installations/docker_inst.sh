@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Docker
-sudo apt-get remove docker docker-engine docker.io
-sudo apt-get update
-sudo apt-get install \
+apt remove -y docker docker-engine docker.io
+apt update -y
+apt install -y \
     apt-transport-https \
     ca-certificates \
     curl \
@@ -19,8 +19,8 @@ sudo add-apt-repository \
    ${DISTRIB_CODENAME} \
    stable"
 
-sudo apt-get update
-sudo apt-get -y install docker-ce
+apt update -y
+apt install -y docker-ce
 
 # Manage Docker as a non-root user
 sudo groupadd docker
