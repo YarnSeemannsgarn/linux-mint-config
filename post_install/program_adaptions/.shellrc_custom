@@ -1,5 +1,5 @@
 
-### OWN ADAPTIONS ###
+### CUSTOM ADAPTIONS ###
 # Clear screen
 alias cls='printf "\033c"'
 
@@ -9,3 +9,6 @@ alias ll='ls -la'
 
 # docker aliases
 alias dco='docker-compose'
+
+# tree aliases
+alias t='tree'
