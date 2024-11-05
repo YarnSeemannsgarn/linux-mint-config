@@ -1,8 +1,14 @@
 
 # Oh-my-zsh
+ZSH_CUSTOM=/.oh-my-zsh-custom
+
+zsh-syntax-highlighting.git
+
 plugins=(
   git
   docker-compose
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
