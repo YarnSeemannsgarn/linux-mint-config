@@ -10,6 +10,9 @@
 # Directories
 !/post_install
 
+# zsh
+!/.oh-my-zsh/custom/plugins/zsh-autosuggestions/
+
 # Emacs
 !/.emacs
 !/.emacs.d/auto-complete-plus/
