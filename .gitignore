@@ -17,7 +17,9 @@
 !/.oh-my-zsh/custom/
 /.oh-my-zsh/custom/*
 
-/.oh-my-zsh/custom/plugins/
+!/.oh-my-zsh/custom/plugins/
+/.oh-my-zsh/custom/plugins/*
+
 !/.oh-my-zsh/custom/plugins/zsh-autosuggestions/
 
 # Emacs
