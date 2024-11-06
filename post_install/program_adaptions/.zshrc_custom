@@ -1,6 +1,6 @@
 
 # Oh-my-zsh
-ZSH_CUSTOM=.oh-my-zsh-custom/
+ZSH_CUSTOM=$HOME/.oh-my-zsh-custom/
 
 zsh-syntax-highlighting.git
 
