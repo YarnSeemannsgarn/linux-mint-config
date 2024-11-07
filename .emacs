@@ -55,7 +55,7 @@
 (load-theme 'misterioso t)
 
 ; Set font size
-(set-face-attribute 'default nil :height 250)
+(set-face-attribute 'default nil :height 150)
 
 (xterm-mouse-mode 1)
 (ac-config-default)
