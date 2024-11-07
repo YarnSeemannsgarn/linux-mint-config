@@ -45,8 +45,8 @@
 (require 'php-mode)
 (require 'cc-mode)
 (require 'web-mode)
-(require 'markdown-mode)
-(require 'sparql-mode)
+;(require 'markdown-mode)
+;(require 'sparql-mode)
 
 ; Not in any directory
 (load-file "~/.emacs.d/auto-complete-plus/auto-complete+.el")
