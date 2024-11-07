@@ -5,6 +5,9 @@
 ; Start in fullscreen
 (add-to-list 'initial-frame-alist '(fullscreen . fullboth))
 
+; Prevent menubar
+(menu-bar-mode -1)
+
 ; Prevent startup screen
 (setq inhibit-startup-screen t)
 
