@@ -49,6 +49,9 @@
 ; Prevent startup screen
 (setq inhibit-startup-screen t)
 
+; Load theme
+(load-theme 'misterioso t)
+
 ; Set font size
 (set-face-attribute 'default nil :height 250)
 
