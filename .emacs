@@ -1,21 +1,7 @@
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+;;;;;;;;;;;;;;;;;;
+;; Package init ;;
+;;;;;;;;;;;;;;;;;;
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; ********* Own customizations ********* ;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; Set font size
-(set-face-attribute 'default nil :height 250)
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; ********* Package init **** ;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Taken from http://stackoverflow.com/questions/10092322/how-to-automatically-install-emacs-packages-by-specifying-a-list-of-package-name
 
 ; Install required packages packages automaticaly
@@ -51,21 +37,19 @@
 ; Not in any directory
 (load-file "~/.emacs.d/auto-complete-plus/auto-complete+.el")
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; ********* General  ********* ;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; Start in fullscreen
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
-  '(inhibit-startup-screen t)
-  '(initial-frame-alist (quote ((fullscreen . maximized))))
-  '(package-selected-packages
-     (quote
-       (sparql-mode yasnippet web-mode php-mode auto-complete))))
+;;;;;;;;;;;;;
+;; General ;;
+;;;;;;;;;;;;;
+
+; Start in fullscreen
+(add-to-list 'initial-frame-alist '(fullscreen . fullboth))
+
+; Prevent startup screen
+(setq inhibit-startup-screen t)
+
+; Set font size
+(set-face-attribute 'default nil :height 250)
 
 (xterm-mouse-mode 1)
 (ac-config-default)
@@ -89,36 +73,38 @@
   (setq web-mode-code-indent-offset n)
 )
 
-;; Keybindings to easily resize windows
+; Keybindings to easily resize windows
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
 (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 
-;; Wind move
+; Wind move
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings))
 
-;; Backup folder
+; Backup folder
 (setq backup-directory-alist `(("." . "~/.emacs_saves")))
 
-;; Auto refresh buffers when files are changed on disk
+; Auto refresh buffers when files are changed on disk
 (global-auto-revert-mode t)
 
-;; font sizing with Ctrl key and mouse scroll
+; font sizing with Ctrl key and mouse scroll
 (global-set-key (kbd "<C-mouse-4>") 'text-scale-increase)
 (global-set-key (kbd "<C-mouse-5>") 'text-scale-decrease)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; ********* C/C++ ********* ;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;
+;; C/C++ ;;
+;;;;;;;;;;;
 
 (setq c-basic-offset 4)
 (c-set-offset 'access-label '/)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; ********* Web Development ********* ;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Web Development ;;
+;;;;;;;;;;;;;;;;;;;;;
 
 (add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
 
