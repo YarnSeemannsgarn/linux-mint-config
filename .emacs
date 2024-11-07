@@ -11,7 +11,9 @@
                      php-mode
                      cc-mode
                      web-mode
-                     typescript-mode))
+                     typescript-mode
+                     scss-mode
+                     coffee-mode))
 
 ; list the repositories containing them
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
@@ -111,9 +113,3 @@
 ;;;;;;;;;;;;;;;;;;;;;
 
 (add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
-
-; Scss-mode (https://github.com/antonj/scss-mode/)
-;(require 'scss-mode)
-
-; Coffee-mode (https://github.com/defunkt/coffee-mode)
-;(require 'coffee-mode)
