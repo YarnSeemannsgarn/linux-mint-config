@@ -24,7 +24,8 @@
 ; list the repositories containing them
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
-                         ("melpa" . "http://melpa.org/packages/")))
+                         ("melpa" . "http://melpa.org/packages/"))
+)
       
 ; activate all the packages (in particular autoloads)
 (package-initialize)
@@ -47,7 +48,7 @@
 (require 'markdown-mode)
 (require 'sparql-mode)
 
-;; Not in any directory
+; Not in any directory
 (load-file "~/.emacs.d/auto-complete-plus/auto-complete+.el")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -56,15 +57,15 @@
 
 ;; Start in fullscreen
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(inhibit-startup-screen t)
- '(initial-frame-alist (quote ((fullscreen . maximized))))
- '(package-selected-packages
-   (quote
-    (sparql-mode yasnippet web-mode php-mode auto-complete))))
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+  '(inhibit-startup-screen t)
+  '(initial-frame-alist (quote ((fullscreen . maximized))))
+  '(package-selected-packages
+     (quote
+       (sparql-mode yasnippet web-mode php-mode auto-complete))))
 
 (xterm-mouse-mode 1)
 (ac-config-default)
@@ -73,20 +74,20 @@
 ; turn on Semantic
 (semantic-mode 1)
 
-;; Tab settings
+; Tab settings
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq-default nxml-child-indent 4)
 (setq web-mode-code-indent-offset 4)
 
-;; For changing tab settings in buffer
+; For changing tab settings in buffer
 (defun my-set-indents (n)
   (interactive "p")
   (setq n (if n (prefix-numeric-value n) 2))
   (setq-default tab-width n)
   (setq-default nxml-child-indent n)
   (setq web-mode-code-indent-offset n)
-  )
+)
 
 ;; Keybindings to easily resize windows
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
@@ -121,8 +122,8 @@
 
 (add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
 
-;; Scss-mode (https://github.com/antonj/scss-mode/)
+; Scss-mode (https://github.com/antonj/scss-mode/)
 ;(require 'scss-mode)
 
-;; Coffee-mode (https://github.com/defunkt/coffee-mode)
+; Coffee-mode (https://github.com/defunkt/coffee-mode)
 ;(require 'coffee-mode)
