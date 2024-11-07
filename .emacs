@@ -5,7 +5,13 @@
 ; Taken from http://stackoverflow.com/questions/10092322/how-to-automatically-install-emacs-packages-by-specifying-a-list-of-package-name
 
 ; Install required packages packages automaticaly
-(setq package-list '(package auto-complete yasnippet php-mode cc-mode web-mode ))
+(setq package-list '(package
+                     auto-complete
+                     yasnippet
+                     php-mode
+                     cc-mode
+                     web-mode
+                     typescript-mode))
 
 ; list the repositories containing them
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
@@ -25,14 +31,9 @@
   (unless (package-installed-p package)
     (package-install package)))
 
-(require 'package)
-(require 'auto-complete)
-(require 'yasnippet)
-(require 'php-mode)
-(require 'cc-mode)
-(require 'web-mode)
-;(require 'markdown-mode)
-;(require 'sparql-mode)
+; Require packages
+(dolist (pkg package-list)
+  (require pkg))
 
 ; Not in any directory
 (load-file "~/.emacs.d/auto-complete-plus/auto-complete+.el")
