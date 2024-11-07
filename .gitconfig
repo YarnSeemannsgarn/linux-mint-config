@@ -19,3 +19,5 @@
     s = !git status && git stash list
     t = log --branches --decorate --graph --tags
     tree = log --branches --decorate --graph --tags
+[includeIf "gitdir:~/onlim/"]
+    path = ~/onlim/.gitconfig
