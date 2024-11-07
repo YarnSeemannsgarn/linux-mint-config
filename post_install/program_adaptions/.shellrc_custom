@@ -10,3 +10,4 @@ alias ll='ls -la'
 # Other aliases
 alias dco='docker-compose'
 alias t='tree'
+alias emacs='emacs -nw'
