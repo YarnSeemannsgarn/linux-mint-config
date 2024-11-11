@@ -75,7 +75,8 @@
                      web-mode
                      typescript-mode
                      scss-mode
-                     coffee-mode))
+                     coffee-mode
+                     git-modes))
 
 ; list the repositories containing them
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
