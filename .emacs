@@ -1,3 +1,46 @@
+;;;;;;;;;;;;;;;;;;
+;; Package init ;;
+;;;;;;;;;;;;;;;;;;
+
+; Taken from http://stackoverflow.com/questions/10092322/how-to-automatically-install-emacs-packages-by-specifying-a-list-of-package-name
+
+; Install required packages packages automaticaly
+(setq package-list '(package
+                     auto-complete
+                     yasnippet
+                     php-mode
+                     cc-mode
+                     web-mode
+                     typescript-mode
+                     scss-mode
+                     coffee-mode
+                     git-modes))
+
+; list the repositories containing
+(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+                         ("melpa-stable" . "https://stable.melpa.org/packages/")))
+
+; activate all the packages (in particular autoloads)
+(package-initialize)
+
+; fetch the list of packages available
+(unless package-archive-contents
+  (package-refresh-contents))
+
+; install the missing packages
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
+
+; Require packages
+(dolist (pkg package-list)
+  (require pkg))
+
+; Git submodules (which are not in Melpa etc. packages)
+(load-file "~/.emacs.d/auto-complete-plus/auto-complete+.el")
+(load-file "~/.emacs.d/emacs-prisma-mode/prisma-mode.el")
+
+
 ;;;;;;;;;;;;;
 ;; General ;;
 ;;;;;;;;;;;;;
@@ -58,51 +101,6 @@
 ; font sizing with Ctrl key and mouse scroll
 (global-set-key (kbd "<C-mouse-4>") 'text-scale-increase)
 (global-set-key (kbd "<C-mouse-5>") 'text-scale-decrease)
-
-
-;;;;;;;;;;;;;;;;;;
-;; Package init ;;
-;;;;;;;;;;;;;;;;;;
-
-; Taken from http://stackoverflow.com/questions/10092322/how-to-automatically-install-emacs-packages-by-specifying-a-list-of-package-name
-
-; Install required packages packages automaticaly
-(setq package-list '(package
-                     auto-complete
-                     yasnippet
-                     php-mode
-                     cc-mode
-                     web-mode
-                     typescript-mode
-                     scss-mode
-                     coffee-mode
-                     git-modes))
-
-; list the repositories containing them
-(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")
-                         ("melpa" . "http://melpa.org/packages/"))
-)
-
-; activate all the packages (in particular autoloads)
-(package-initialize)
-
-; fetch the list of packages available
-(unless package-archive-contents
-  (package-refresh-contents))
-
-; install the missing packages
-(dolist (package package-list)
-  (unless (package-installed-p package)
-    (package-install package)))
-
-; Require packages
-(dolist (pkg package-list)
-  (require pkg))
-
-; Git submodules (which are not in Melpa etc. packages)
-(load-file "~/.emacs.d/auto-complete-plus/auto-complete+.el")
-(load-file "~/.emacs.d/emacs-prisma-mode/prisma-mode.el")
 
 
 ;;;;;;;;;;;
