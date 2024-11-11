@@ -99,8 +99,9 @@
 (dolist (pkg package-list)
   (require pkg))
 
-; Not in any directory
+; Git submodules (which are not in Melpa etc. packages)
 (load-file "~/.emacs.d/auto-complete-plus/auto-complete+.el")
+(load-file "~/.emacs.d/emacs-prisma-mode/prisma-mode.el")
 
 
 ;;;;;;;;;;;

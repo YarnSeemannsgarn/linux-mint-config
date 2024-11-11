@@ -2,6 +2,10 @@
 	path = .emacs.d/auto-complete-plus
 	url = git@github.com:emacsmirror/auto-complete-plus.git
 
+[submodule ".emacs.d/emacs-prisma-mode"]
+	path = .emacs.d/emacs-prisma-mode
+	url = git@github.com:pimeys/emacs-prisma-mode.git
+
 [submodule ".oh-my-zsh-custom/plugins/zsh-autosuggestions"]
 	path = .oh-my-zsh-custom/plugins/zsh-autosuggestions
 	url = git@github.com:zsh-users/zsh-autosuggestions.git

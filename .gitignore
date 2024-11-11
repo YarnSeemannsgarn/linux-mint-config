@@ -16,6 +16,7 @@
 # Emacs
 !/.emacs
 !/.emacs.d/auto-complete-plus/
+!/.emacs.d/emacs-prisma-mode/
 
 # Mercurial
 !/.hgrc
