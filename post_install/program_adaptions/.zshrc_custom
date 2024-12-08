@@ -9,6 +9,8 @@ plugins=(
   docker-compose
   zsh-autosuggestions
   zsh-syntax-highlighting
+  you-should-use
+  zsh-bat
 )
 
 source $ZSH/oh-my-zsh.sh
