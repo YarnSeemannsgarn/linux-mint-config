@@ -1,7 +1,7 @@
 
 ### CUSTOM ADAPTIONS ###
 # Clear screen
-alias cls='printf "\033c"'
+alias cls='clear && printf "\033c"'
 
 # ls aliases
 alias la='ls -la'
