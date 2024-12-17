@@ -7,6 +7,10 @@ alias cls='clear && printf "\033c"'
 alias la='ls -la'
 alias ll='ls -la'
 
+# Emacs aliases
+alias e='emacs'
+#alias emacs='emacs -nw'
+
 # Other aliases
 alias dco='docker-compose'
 alias t='tree'
