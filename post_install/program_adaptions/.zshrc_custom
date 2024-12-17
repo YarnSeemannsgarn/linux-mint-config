@@ -11,6 +11,7 @@ plugins=(
   zsh-syntax-highlighting
   you-should-use
   zsh-bat
+  zsh-npm-scripts-autocomplete
 )
 
 source $ZSH/oh-my-zsh.sh
