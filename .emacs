@@ -1,89 +1,142 @@
-;;;;;;;;;;;;;;;;;;
-;; Package init ;;
-;;;;;;;;;;;;;;;;;;
+;;; Emacs-config --- Finally make use of lsp
+;;; Commentary:
+;;; Code:
 
-; Taken from http://stackoverflow.com/questions/10092322/how-to-automatically-install-emacs-packages-by-specifying-a-list-of-package-name
-
-; Install required packages packages automaticaly
-(setq package-list '(package
-                     auto-complete
-                     yasnippet
-                     php-mode
-                     cc-mode
-                     web-mode
-                     typescript-mode
-                     scss-mode
-                     coffee-mode
-                     git-modes
-                     markdown-mode))
-
-; list the repositories containing
+;; Package setup
+(require 'package)
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
-                         ("melpa-stable" . "https://stable.melpa.org/packages/")))
+                         ("melpa-stable" . "https://stable.melpa.org/packages/")
+			 ("melpa" . "https://melpa.org/packages/")))
 
-; activate all the packages (in particular autoloads)
 (package-initialize)
 
-; fetch the list of packages available
-(unless package-archive-contents
-  (package-refresh-contents))
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
 
-; install the missing packages
-(dolist (package package-list)
-  (unless (package-installed-p package)
-    (package-install package)))
+(require 'use-package)
+(setq use-package-always-ensure t)
 
-; Require packages
-(dolist (pkg package-list)
-  (require pkg))
+;; Syntax Highlighting for TypeScript
+(use-package typescript-mode
+  :mode "\\.ts\\'"
+  :hook (typescript-mode . lsp-deferred))
 
-; Git submodules (which are not in Melpa etc. packages)
-(load-file "~/.emacs.d/auto-complete-plus/auto-complete+.el")
-(load-file "~/.emacs.d/emacs-prisma-mode/prisma-mode.el")
+(use-package lsp-mode
+  :commands (lsp lsp-deferred)
+  :hook ((typescript-mode . lsp-deferred)
+         (ruby-mode . lsp-deferred)
+         (sh-mode . lsp-deferred))
+  :config
+  (setq lsp-headerline-breadcrumb-enable nil
+        lsp-enable-snippet t
+        lsp-completion-enable t)
+
+
+  )
+
+(use-package lsp-ui
+  :commands lsp-ui-mode
+  :config
+  :hook
+  (setq lsp-ui-doc-enable t
+        lsp-ui-sideline-enable t
+        lsp-ui-imenu-enable t
+        lsp-ui-peek-enable t))
+
+;; Auto-completion
+(use-package company
+  :hook (prog-mode . company-mode)
+  :config
+  (setq company-minimum-prefix-length 1
+        company-idle-delay 0.0))
+
+;; Linting
+(use-package flycheck
+  :init ())
+
+(use-package flycheck-pos-tip
+  :init ())
+
+
+;; Tree View for Project Files
+(use-package treemacs
+  :bind
+  ("C-x t t" . treemacs))
+
+(use-package lsp-treemacs
+  :ensure t
+  :commands lsp-treemacs-symbols)
+
+;; JSON mode
+(use-package json-mode
+  :ensure t
+  :config
+  (setq json-mode-indent-level 2)
+  (add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode)))
+
+;; Code Formatting with Prettier
+(use-package prettier-js
+  :ensure t
+  :hook (typescript-mode . prettier-js-mode)
+  :commands (prettier-js))
+(add-hook 'before-save-hook 'prettier-js nil t)
+
+(use-package prisma-mode
+  :load-path "~/.emacs.d/emacs-prisma-mode/")
+
+(use-package simple
+  :ensure nil
+  :bind
+  (([mouse-8] . pop-global-mark)        ;; Go to the previous position
+   ([mouse-9] . jump-to-register)))    ;; Go to the next position
+
+;; Activate global mark saving to track cursor positions
+(setq set-mark-command-repeat-pop t)
+
+
+;(use-package projectile
+;  :ensure t
+;  :config
+;  (projectile-mode +1)
+;  (setq projectile-completion-system 'default)
+;  :bind-keymap
+;  ("C-c p" . projectile-command-map))
+;
+(use-package ivy
+  :ensure t
+  :config
+  (ivy-mode 1))
+;
+;;; Ivy Integration for LSP
+;(use-package lsp-ivy
+;  :ensure t
+;  :after (lsp-mode ivy))
 
 
 ;;;;;;;;;;;;;
 ;; General ;;
 ;;;;;;;;;;;;;
 
-; Start in fullscreen
-(add-to-list 'initial-frame-alist '(fullscreen . fullboth))
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ; Prevent menubar
 (menu-bar-mode -1)
+(tool-bar-mode -1)
 
 ; Prevent startup screen
 (setq inhibit-startup-screen t)
 
-; Load theme
-(load-theme 'misterioso t)
+(use-package jetbrains-darcula-theme
+  :config
+  (load-theme 'jetbrains-darcula t))
 
 ; Set font size
-(set-face-attribute 'default nil :height 150)
+(set-face-attribute 'default nil :height 130)
 
 (xterm-mouse-mode 1)
-(ac-config-default)
-(yas-global-mode 1)
 
-; turn on Semantic
-(semantic-mode 1)
-
-; Tab settings
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 4)
-(setq-default nxml-child-indent 4)
-(setq web-mode-code-indent-offset 4)
-
-; For changing tab settings in buffer
-(defun my-set-indents (n)
-  (interactive "p")
-  (setq n (if n (prefix-numeric-value n) 2))
-  (setq-default tab-width n)
-  (setq-default nxml-child-indent n)
-  (setq web-mode-code-indent-offset n)
-)
-
-; Keybindings to easily resize windows
+; Keybindings to ily resize windows
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
 (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
@@ -103,17 +156,12 @@
 (global-set-key (kbd "<C-mouse-4>") 'text-scale-increase)
 (global-set-key (kbd "<C-mouse-5>") 'text-scale-decrease)
 
+(setq ring-bell-function 'ignore)
 
-;;;;;;;;;;;
-;; C/C++ ;;
-;;;;;;;;;;;
+(setq-default indent-tabs-mode nil)
 
-(setq c-basic-offset 4)
-(c-set-offset 'access-label '/)
+(electric-pair-mode 1)
 
+(provide '.emacs)
+;;; .emacs ends here
 
-;;;;;;;;;;;;;;;;;;;;;
-;; Web Development ;;
-;;;;;;;;;;;;;;;;;;;;;
-
-(add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
