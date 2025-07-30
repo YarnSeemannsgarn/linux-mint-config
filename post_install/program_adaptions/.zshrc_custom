@@ -18,3 +18,33 @@ source $ZSH/oh-my-zsh.sh
 
 # Timestamp for history
 alias history='history -i'
+
+# pnpm
+export PNPM_HOME="/home/$USER/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
+# Show sourced files
+typeset -ga SOURCED_FILES=()
+
+source() {
+  builtin source "$@"
+  if [[ $? -eq 0 ]]; then
+      SOURCED_FILES+=("$1")
+  fi
+}
+
+s() {
+  source "$@"
+}
+
+function rprompt_sourced_file() {
+  if [[ ${#SOURCED_FILES[@]} -gt 0 ]]; then
+    local joined=$(IFS=, ; echo "${SOURCED_FILES[*]}")
+    echo "%F{yellow}⎘ ${joined}%f"
+  fi
+}
+
+RPROMPT='$(rprompt_sourced_file)'
