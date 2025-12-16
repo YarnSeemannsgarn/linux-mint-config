@@ -14,4 +14,11 @@ alias e='emacs'
 # Other aliases
 alias dco='docker-compose'
 alias t='tree'
-alias emacs='emacs -nw'
+
+# Prisma aliases
+alias p='pnpm'
+alias pp='pnpm prisma'
+alias ppm='pnpm prisma migrate'
+alias ppmd='pnpm prisma migrate dev'
+alias ppmr='pnpm prisma migrate reset'
+alias ppmd='pnpm prisma migrate deploy'
